@@ -1,4 +1,8 @@
-<?php require '../base_url.php'; ?>
+<?php require 'base_url.php'; 
+
+require 'config.php';
+
+$query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,7 +23,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"><span>R'L381</span></a>
+    <a class="navbar-brand" href="<?= BASE_URL; ?>views/index.php"><span>R'L381</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,15 +33,25 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="<?= BASE_URL; ?>views/index.php">Home <span class="sr-only">(current)</span></a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL; ?>views/about.php">Tentang Kami</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Layanan</a>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+          Layanan
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+        <?php while($row = mysqli_fetch_assoc($query)):?>
+          <li><a class="dropdown-item" href="<?= BASE_URL;?>views/layanan.php?id=<?=$row['id']; ?>"><?= $row['nama_layanan']; ?></a></li>
+          <?php endwhile;?>
+        </ul>
         </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Layanan</a>
+        </li> -->
         <li class="nav-item">
           <a class="nav-link" href="">Cek Resi</a>
         </li>

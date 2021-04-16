@@ -1,5 +1,7 @@
-<?php require 'template/header.php';?>
-
+<?php require 'template/header.php';
+ require '../config/config.php';
+ $query = mysqli_query($con, "SELECT * FROM laundry_satuan"); 
+ ?>
 
     <div class="container">
     <div class="row">
@@ -26,36 +28,28 @@
     </div>
     <!-- batas -->
     <!-- layanan laundry -->
+  
     <div class="row mt-5">
     <div class="col-md-11 text-center">
     <h2 class="text-center mb-3 mt-0 font-weight-bold">Layanan Rumah Laundry 381</h2>
     <p>Rumah Laundry 381 Memiliki beberapa fitur layanan yang dapat memenuhi kebutuhan anda.</p>
-    </div></div>
-    <div class="row text-center">
-    <div class="col-md-2 kotak">
-    <img src="<?= BASE_URL; ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
-    <p>Laundry Kiloan</p><br>
-    <p>Layanan laundry pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a></div>
-    <div class="col-md-3 kotak">
-    <img src="<?= BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
-    <p>Laundry Satuan</p><br>
-    <p>Layanan laundry pakaian yang proses dan transaksinya dilakukan dengan melihat jenis dan jumlah dari pakaian customer.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a></div>
-    <div class="col-md-3 kotak">
-    <img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
-    <p>Laundry Karpet</p><br>
-    <p>Layanan laundry Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a></div>
-    <div class="col-md-2 kotak">
-    <img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
-    <p>Laundry Shoes</p><br>
-    <p>Laundry Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk kebersihan dan perawatan Sepatu.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a></div>
-    <div class="col-md-2 kotak">
-    <img src="<?= BASE_URL; ?>asset/img/cover.png" class="img-fluid bg-primary rounded-circle" alt="">
-    <p>Laundry Bed Cover</p><br>
-    <p>Jangan paksakan diri untuk mencuci sendiri bed cover Anda. Laundry Bed Cover merupakan salah satu layanan favorit pelanggan Kami. Bersih, rapih, dan wangi.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a></div>
-
     </div>
+    </div>
+    
+    <div class="row text-center">
+    <?php while($row = mysqli_fetch_assoc($query)):?>
+    <div class="col-md-4 kotak">
+   
+    <img src="<?= BASE_URL; ?>asset/img/<?= $row['gambar'];?>" class="img-fluid bg-primary rounded-circle" alt="">
+    <p>Laundry <?= $row['nama_layanan']?></p><br>
+    <p><?= $row['deskripsi']?></p><a href="<?= BASE_URL;?>views/layanan.php?id=<?=$row['id']; ?>" class="btn btn-light">Detail</a>
+   
+    
+    </div>
+    <?php endwhile;?>
+    </div>
+ 
     <!-- batas -->
-
     </div>
     <?php require 'template/footer.php';?>
 

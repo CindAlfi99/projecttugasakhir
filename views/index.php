@@ -1,4 +1,4 @@
-<?php require '../base_url.php'; ?>
+<?php require '../config/base_url.php'; ?>
 <?php require 'template/header.php'; ?>
 
 <!-- banner -->
