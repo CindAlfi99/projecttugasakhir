@@ -44,7 +44,7 @@
         <h4>Laundry Shoes</h4>
         <img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
       </div>
-     3 -->
+
 
   </div>
 </section>

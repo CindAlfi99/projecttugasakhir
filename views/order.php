@@ -6,12 +6,12 @@
 <div class="container mt-5">
 <div class="row ">
 <div class="col-md-5">
-<h1>Ingin Order ?</h1><p>Jika konsumen ingin melakukan pengorderan silahkan isi form pemesanan di samping dan konfirmasikan melalui kontak Admin di bawah. Pastikan Nomor Hp yang dicantumkan sama pada Nomor Hp saat melakukan konfirmasi. Dan cek kembali nomor resi dengan benar agar segera diproses. <br><br>
+<h1>Ingin melakukan pemesanan?</h1><p>Jika konsumen ingin melakukan pemesanan silakan isi form pemesanan di samping dan konfirmasi melalui kontak Admin di bawah. Pastikan nomor HP yang dicantumkan sama pada nomor HP saat melakukan konfirmasi. Serta cek kembali nomor resi dengan benar agar segera diproses. <br><br>
 <img src="<?= BASE_URL; ?>asset/img/lokasi.png" width="23" height="23"alt="">  Jl. May Zen, Sei Selincah 
 <br> <br>
 <img src="<?= BASE_URL;?>asset/img/email.png" width="23" height="23" alt="">  acindi38@gmail.com
 <br><br>
-<img src="<?= BASE_URL;?>asset/img/phone-call.png" width="25" height="25" alt="">   0821-4372-2233 (<i>Hanya melakukan konfirmasi No.resi dan cek nomor</i>) </p>
+<img src="<?= BASE_URL;?>asset/img/phone-call.png" width="25" height="25" alt="">   0821-4372-2233 ( <i>Hanya melakukan konfirmasi No.resi dan cek nomor</i>). </p>
 </div>
 <div class="col-md-6">
 <form>
