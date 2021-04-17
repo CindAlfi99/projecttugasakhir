@@ -2,7 +2,7 @@
 <div class="row mt-5">
 <div class="col-md-5"><img src="<?=BASE_URL;?>asset/img/logo.png" alt="" width="350" height="350"></div>
 <div class="col-md-4 mt-5"><h3>Contact us</h3>
-<p class="mt-5">Jl. May Zen, Sei Selincah Kec. Kalidoni,<br> Kota Palembang</p>
+<p class="mt-5">Jl. May Zen,<br> Kota Palembang</p>
 <br><br>
 <img src="<?= BASE_URL;?>asset/img/phone-call.png" width="25" height="25" alt="">   0811-437-223
 <br><br>

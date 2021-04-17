@@ -54,10 +54,10 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
           <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Layanan</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link" href="">Cek Resi</a>
+          <a class="nav-link" href="<?= BASE_URL;?>views/cekresi.php">Cek Resi</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Pemesanan</a>
+          <a class="nav-link " href="<?= BASE_URL;?>views/order.php" tabindex="-1" aria-disabled="true">Pemesanan</a>
         </li>
 
       </ul>

@@ -38,41 +38,42 @@
     
     <div class="row text-center">
 
-    <div class="col-md-2 kotak">
+    <div class="col-md-3 kotak mx-auto">
    
     <img src="<?= BASE_URL; ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
     <p>Laundry Kiloan</p><br>
     <p><i>Laundry</i> kiloan merupakan layanan laundry yang pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p><a href="<?= BASE_URL;?>views/layanan/layanankiloan.php" class="btn btn-light">Detail</a>
     </div>
-    <div class="col-md-2 kotak">
+    <div class="col-md-3 kotak">
    
    <img src="<?= BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
    <p>Laundry Satuan</p><br>
-   <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan/layanansatuan.php" class="btn btn-light">Detail</a>
    </div>
-   <div class="col-md-2 kotak">
+   <div class="col-md-3 kotak">
    
    <img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
    <p>Laundry Karpet</p><br>
-   <p>Layanan <i>Laundry</i> Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   <p>Layanan <i>Laundry</i> Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan/layanankarpet.php" class="btn btn-light">Detail</a>
    </div>
-   <div class="col-md-2 kotak">
+   <div class="col-md-3 kotak">
    
    <img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
    <p>Laundry Shoes</p><br>
-   <p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   <p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.</p><a href="<?= BASE_URL;?>views/layanan/layanansepatu.php" class="btn btn-light">Detail</a>
    </div>
-   <div class="col-md-2 kotak">
+   <!-- <div class="col-md-3 kotak"> -->
    
-   <img src="<?= BASE_URL; ?>asset/img/cover.png" class="img-fluid bg-primary rounded-circle" alt="">
-   <p>Laundry Bed Cover</p><br>
-   <p>Jangan paksakan diri untuk mencuci sendiri bed cover Anda. Di Rumah Laundry 381, Laundry Bed Cover merupakan salah satu layanan favorit pelanggan Kami. Bersih, rapih, dan wangi.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
-   </div>
-   
+   <!-- <img src="<?= BASE_URL; ?>asset/img/cover.png" class="img-fluid bg-primary rounded-circle" alt="">
+   <p>Laundry Furniture</p><br>
+   <p>Jangan paksakan diri untuk mencuci sendiri bed cover Anda. Di Rumah Laundry 381, Laundry Bed Cover merupakan salah satu layanan favorit pelanggan Kami. Bersih, rapih, dan wangi.</p><a href="<?= BASE_URL;?>views/layanan/layananbedcover.php" class="btn btn-light">Detail</a>
+   </div> -->
+   <!-- </div>  -->
   
-    </div>
+  
  
     <!-- batas -->
+    </div>
     </div>
     <?php require 'template/footer.php';?>
 

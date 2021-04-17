@@ -28,7 +28,7 @@
     </h2>
 
     <div class="row text-center">
-      <div class="col-md-2 mt-4 ">
+      <div class="col-md-3 mt-4 ">
         <h4>Laundry Kiloan</h4>
         <img src="<?= BASE_URL?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
       </div>
@@ -40,15 +40,11 @@
         <h4>Laundry Karpet</h4>
         <img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
       </div>
-      <div class="col-md-2 ">
+      <div class="col-md-3 ">
         <h4>Laundry Shoes</h4>
         <img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
       </div>
-      <div class="col-md-2 mt-4">
-        <h4>Laundry Bedcover</h4>
-        <img src="<?= BASE_URL; ?>asset/img/cover.png" class="img-fluid bg-primary rounded-circle" alt="">
-      </div>
-    </div>
+     3 -->
 
   </div>
 </section>
