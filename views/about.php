@@ -37,23 +37,45 @@
     </div>
     
     <div class="row text-center">
-    <?php while($row = mysqli_fetch_assoc($query)):?>
-    <div class="col-md-4 kotak">
+
+    <div class="col-md-2 kotak">
    
-    <img src="<?= BASE_URL; ?>asset/img/<?= $row['gambar'];?>" class="img-fluid bg-primary rounded-circle" alt="">
-    <p>Laundry <?= $row['nama_layanan']?></p><br>
-    <p><?= $row['deskripsi']?></p><a href="<?= BASE_URL;?>views/layanan.php?id=<?=$row['id']; ?>" class="btn btn-light">Detail</a>
-   
-    
+    <img src="<?= BASE_URL; ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
+    <p>Laundry Kiloan</p><br>
+    <p><i>Laundry</i> kiloan merupakan layanan laundry yang pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p><a href="<?= BASE_URL;?>views/layanan/layanankiloan.php" class="btn btn-light">Detail</a>
     </div>
-    <?php endwhile;?>
+    <div class="col-md-2 kotak">
+   
+   <img src="<?= BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
+   <p>Laundry Satuan</p><br>
+   <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   </div>
+   <div class="col-md-2 kotak">
+   
+   <img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
+   <p>Laundry Karpet</p><br>
+   <p>Layanan <i>Laundry</i> Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   </div>
+   <div class="col-md-2 kotak">
+   
+   <img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
+   <p>Laundry Shoes</p><br>
+   <p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   </div>
+   <div class="col-md-2 kotak">
+   
+   <img src="<?= BASE_URL; ?>asset/img/cover.png" class="img-fluid bg-primary rounded-circle" alt="">
+   <p>Laundry Bed Cover</p><br>
+   <p>Jangan paksakan diri untuk mencuci sendiri bed cover Anda. Di Rumah Laundry 381, Laundry Bed Cover merupakan salah satu layanan favorit pelanggan Kami. Bersih, rapih, dan wangi.</p><a href="<?= BASE_URL;?>views/layanan.php" class="btn btn-light">Detail</a>
+   </div>
+   
+  
     </div>
  
     <!-- batas -->
     </div>
     <?php require 'template/footer.php';?>
 
-</body>
-</html>
+
 
   

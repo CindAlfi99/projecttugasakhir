@@ -141,3 +141,6 @@ font-size: x-large;
 .footer{
     background-image: linear-gradient(to right, #1ea6ec, #2c92fb);
 }
+span{
+    font-size: xx-large;
+}

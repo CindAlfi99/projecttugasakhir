@@ -21,7 +21,7 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
 
     <section id="id">
 
-<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="<?= BASE_URL; ?>views/index.php"><span>R'L381</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,8 +39,9 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
         <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL; ?>views/about.php">Tentang Kami</a>
         </li>
+        
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-disabled="true">
           Layanan
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
