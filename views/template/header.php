@@ -1,6 +1,8 @@
-<?php require 'base_url.php'; 
+<?php 
 
-require 'config.php';
+// require 'base_url.php';
+
+// require 'config.php';
 
 $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
 <!doctype html>
@@ -11,7 +13,7 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<?= BASE_URL; ?>asset/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>asset/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= BASE_URL; ?>asset/css/landing.css">
 
     <title>Rumah Laundry 381</title>
