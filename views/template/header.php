@@ -1,7 +1,8 @@
-<?php require 'base_url.php'; 
-
-require 'config.php';
-
+<?php
+//  require '../../config/base_url.php'; 
+// require '../../config/config.php';
+require '../config/config.php';
+require '../config/base_url.php'; 
 $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
 <!doctype html>
 <html lang="en">
@@ -21,7 +22,7 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
 
     <section id="id">
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <div class="container">
     <a class="navbar-brand" href="<?= BASE_URL; ?>views/index.php"><span>R'L381</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,18 +42,16 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
         </li>
         
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-disabled="true">
-          Layanan
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-        <?php while($row = mysqli_fetch_assoc($query)):?>
-          <li><a class="dropdown-item" href="<?= BASE_URL;?>views/layanan.php?id=<?=$row['id']; ?>"><?= $row['nama_layanan']; ?></a></li>
-          <?php endwhile;?>
-        </ul>
-        </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Layanan</a>
-        </li> -->
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item bg-dark" href="<?= BASE_URL; ?>views/layanansatuan.php">Laundry Satuan</a>
+          <a class="dropdown-item bg-dark" href="<?= BASE_URL; ?>views/layanankiloan.php">Laundry Kiloan</a>
+          <a class="dropdown-item bg-dark" href="<?= BASE_URL; ?>views/layanankarpet.php">Laundry Karpet</a>
+          <a class="dropdown-item bg-dark" href="<?= BASE_URL; ?>views/layanansepatu.php">Laundry Shoes</a>
+      </li>
+        
         <li class="nav-item">
           <a class="nav-link" href="<?= BASE_URL;?>views/cekresi.php">Cek Resi</a>
         </li>

@@ -1,3 +1,5 @@
+
+
 <footer class="footer bg-primary">
 <div class="row mt-5">
 <div class="col-md-5"><img src="<?=BASE_URL;?>asset/img/logo.png" alt="" width="350" height="350"></div>
@@ -15,8 +17,9 @@
 <p><img src="<?= BASE_URL;?>asset/img/running.png" width="25" height="25"><a href="#">Laundry Sepatu</a></p>
 <p><img src="<?= BASE_URL;?>asset/img/cover.png" width="25" height="25"><a href="#">Laundry Bed Cover</a></p></div></div>
 </footer>
-<script src="<?= BASE_URL; ?>asset/js/jquery.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="<?= BASE_URL; ?>asset/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
+<script src="<?= BASE_URL; ?>asset/js/jquery.min.js"  crossorigin="anonymous"></script>
+    <script src="<?= BASE_URL; ?>asset/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+ 
+ 
 </body>
 </html>

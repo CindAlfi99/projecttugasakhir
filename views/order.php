@@ -1,4 +1,31 @@
-<?php require 'template/header.php'; ?>
+
+
+<?php
+ require 'template/header.php';
+
+?>
+
+    
+<script>
+function my_fun(str) {
+
+if (window.XMLHttpRequest) {
+xmlhttp = new XMLHttpRequest();
+} else{
+xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+}
+
+xmlhttp.onreadystatechange= function(){
+if (this.readyState==4 && this.status==200) {
+    document.getElementById('item').innerHTML = this.responseText;
+}
+}
+xmlhttp.open("GET","helper.php?value="+str, true);
+xmlhttp.send();
+
+}
+   
+</script>
 <br>
 <br>
 <br>
@@ -14,41 +41,49 @@
 <img src="<?= BASE_URL;?>asset/img/phone-call.png" width="25" height="25" alt="">   0821-4372-2233 ( <i>Hanya melakukan konfirmasi No.resi dan cek nomor</i>). </p>
 </div>
 <div class="col-md-6">
-<form>
+<form action="helper.php" method="post">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="">Nama</label>
-      <input type="nama" class="form-control">
+      <input type="nama" name="nama" class="form-control" autofocus>
     </div>
     <div class="form-group col-md-6">
       <label for="">Email</label>
-      <input type="email" class="form-control" id>
+      <input type="email" name="email" class="form-control" id>
     </div>
 
   <div class="form-group col-md-6">
       <label for="">No.Telp (WA)</label>
-      <input type="number" class="form-control" id>
+      <input type="number" name="wa" class="form-control" id>
     </div>
 
  
   <div class="form-group col-md-6">
-    <label for="inputAddress2 col-md-6">Alamat Penjemputan</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="inputAddress2 col-md-6">Alamat </label>
+    <input type="text"name="alamat" class="form-control" id="inputAddress2" placeholder="Masukkan Alamat Penjemputan">
   </div>
   <div class="form-group col-md-6">
       <label for="inputState">Layanan</label>
-      <select id="inputState" class="form-control">
+      <select id="layanan" name="layanan" class="form-control" onchange="my_fun(this.value);">
         <option selected>Choose...</option>
-        <option>Kiloan</option>
-        <option>Satuan</option>
-        <option>Karpet</option>
-        <option>Sepatu</option>
+        <option value="kiloan">Kiloan</option>
+        <option value="satuan">Satuan</option>
+        <option value="karpet">Karpet</option>
+        <option value="shoes">Sepatu</option>
       </select>
     </div>
-   
+    <div class="form-group col-md-6">
+      <label for="inputState">Jenis item</label>
+      <select id="item" name="jenis_item"class="form-control"><option>Pilih Layanan</option>
+      </select>
     </div>
+    <div class="form-group col-md-6">
+      <label for="">Jumlah</label>
+      <input type="number" name="jumlah" class="form-control" id>
+    </div>
+   </div>
   
-  <button type="submit" class="btn btn-primary">Order Sekarang</button>
+  <button type="submit" name="submit"  class="btn btn-primary">Order Sekarang</button>
 </form>
 </div>
 </div>
