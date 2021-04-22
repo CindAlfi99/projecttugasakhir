@@ -1,6 +1,5 @@
 <?php require 'template/header.php';
- require '../config/config.php';
- $query = mysqli_query($con, "SELECT * FROM laundry_satuan"); 
+
  ?>
 
     <div class="container">
@@ -42,25 +41,25 @@
    
     <img src="<?= BASE_URL; ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
     <p>Laundry Kiloan</p><br>
-    <p><i>Laundry</i> kiloan merupakan layanan laundry yang pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p><a href="<?= BASE_URL;?>views/layanan/layanankiloan.php" class="btn btn-light">Detail</a>
+    <p><i>Laundry</i> kiloan merupakan layanan laundry yang pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p><a href="<?= BASE_URL;?>views/layanankiloan.php" class="btn btn-light">Detail</a>
     </div>
     <div class="col-md-3 kotak">
    
    <img src="<?= BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
    <p>Laundry Satuan</p><br>
-   <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan/layanansatuan.php" class="btn btn-light">Detail</a>
+   <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanansatuan.php" class="btn btn-light">Detail</a>
    </div>
    <div class="col-md-3 kotak">
    
    <img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
    <p>Laundry Karpet</p><br>
-   <p>Layanan <i>Laundry</i> Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanan/layanankarpet.php" class="btn btn-light">Detail</a>
+   <p>Layanan <i>Laundry</i> Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p><a href="<?= BASE_URL;?>views/layanankarpet.php" class="btn btn-light">Detail</a>
    </div>
    <div class="col-md-3 kotak">
    
    <img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
    <p>Laundry Shoes</p><br>
-   <p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.</p><a href="<?= BASE_URL;?>views/layanan/layanansepatu.php" class="btn btn-light">Detail</a>
+   <p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.</p><a href="<?= BASE_URL;?>views/layanansepatu.php" class="btn btn-light">Detail</a>
    </div>
    <!-- <div class="col-md-3 kotak"> -->
    
