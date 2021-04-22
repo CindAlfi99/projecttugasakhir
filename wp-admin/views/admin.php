@@ -1,19 +1,5 @@
 <?php require 'template/header.php';
-// require "../config/DB.php";
-$connection = mysqli_connect('localhost','root','','rumahlaundry381');
- if(isset($_POST['submit'])){
-     var_dump($_POST['submit']);
-     exit;
-    $nama =$_POST['email'];
- $query = mysqli_query($connection,"SELECT * FROM users WHERE nama = '$nama'");
-if(mysqli_num_rows($query) > 0){
-    header("Location: admin.php");
-}
-else{
-    $error = mysqli_error($db);
-    header("Location: index.php");
-  }
-}
+
   ?>
   <!-- menu -->
                 <div class="container-fluid">
@@ -63,7 +49,7 @@ else{
                                 </div>
                             </div>
                         </div>
-
+                       
                         <!-- Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
@@ -105,6 +91,7 @@ else{
 
             </div>
             
+         
          
         
 

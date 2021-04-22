@@ -1,4 +1,11 @@
+<?php require '../config/DB.php';
 
+$query = mysqli_query($connection, "SELECT * FROM order_masuk WHERE proses='jemput'");
+
+$count = mysqli_num_rows($query); 
+$count;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,11 +31,11 @@
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/baru.css"/>
-    <script src="../../asset/js/jquery.min.js"></script>
-    <script src="../../asset/js/bootstrap.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
+    
+ 
+   
+ 
+    
 
 </head>
 
@@ -56,7 +63,7 @@
             </div>
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.php">
+                <a class="nav-link" href="admin.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -167,8 +174,31 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                  
-               
+                        <div class="dropdown">
+  <i class="fa fa-bell mt-4" aria-hidden="true" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+ <span class="text-danger"> <?= $count;?></span>
+  </i>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  
+  <?php while($row = mysqli_fetch_assoc($query)):?>
+    <button class="dropdown-item" type="button"><i class="far fa-user"></i> Konsumen : <?= $row['nama_pemesan'];?><br>Layanan : <span class="text-danger"><?= $row['layanan'];?></span><br> Jumlah: <?= $row['jumlah'] ?></button>
+   <?php endwhile;?>
+    
+  </div>
+</div>
+                        <!-- <div class="btn-group">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+          Action
+        </button>
+        <div class="dropdown-menu">
+       
+        <a class="dropdown-item" href="#"></a>
+        
+        </div>
+  </div> -->
+
+
+                        <!-- <i class="fa fa-bell mt-4" aria-hidden="true" id="noti_number"></i> -->
                          <!-- batas -->
                         
 

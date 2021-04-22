@@ -1,6 +1,6 @@
 <?php
-  require "connection/DB.php";
-  require "assests/php.php";
+  require "assets/connection/DB.php";
+  require "assets/php.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
