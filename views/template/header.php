@@ -42,8 +42,8 @@ $query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
         </li>
         
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+        <a class="nav-link dropdown-toggle" href="<?= BASE_URL; ?>views/layanansatuan.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Layanan
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item bg-dark" href="<?= BASE_URL; ?>views/layanansatuan.php">Laundry Satuan</a>

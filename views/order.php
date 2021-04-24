@@ -82,7 +82,24 @@ xmlhttp.send();
       <input type="number" name="jumlah" class="form-control" id>
     </div>
    </div>
+<!-- cek ongkir   -->
+<div class="form-group col-md-6 float-right" style="margin-top:-90px;">
+<p>
+  <a class="btn btn-light" data-toggle="collapse" href="#multiCollapseExample1" role="button" style=" border: 1px solid black"aria-expanded="false" aria-controls="multiCollapseExample1">Info ongkir</a>
+ 
+</p>
+
   
+    <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div class="card card-body">
+       Pusri dan sekitarnya: 10.000
+       Lewat pusri penambahan biaya + 10.000
+      </div>
+  
+  </div>
+  </div>
+  
+<!-- batas -->
   <button type="submit" name="submit"  class="btn btn-primary">Order Sekarang</button>
 </form>
 </div>

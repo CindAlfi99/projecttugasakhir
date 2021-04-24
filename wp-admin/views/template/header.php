@@ -1,7 +1,8 @@
 <?php require '../config/DB.php';
 
 $query = mysqli_query($connection, "SELECT * FROM order_masuk WHERE proses='jemput'");
-
+$querys = mysqli_query($connection, "SELECT * FROM users ");
+$user = mysqli_fetch_assoc($querys);
 $count = mysqli_num_rows($query); 
 $count;
 
@@ -172,6 +173,13 @@ $count;
                                 </form>
                             </div>
                         </li>
+                        <!-- welcome -->
+                        <!-- <div class="row">
+                            <div class="col-md-12 float-left">
+                                <h3>Welcome, Admin Rumah Laundry 381</h3>
+                            </div>
+                        </div> -->
+                        <!-- batas -->
 
                         <!-- Nav Item - Alerts -->
                         <div class="dropdown">
@@ -208,7 +216,7 @@ $count;
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['nama'] ?></span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                                     <!-- <i class="fas fa-user-alt"></i> -->
