@@ -29,9 +29,9 @@ $count;
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css"/> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css"/> -->
     
  
    
@@ -49,7 +49,7 @@ $count;
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center mb-0" href="index.html">
                 <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-user-cog"></i>
                 </div>
@@ -84,40 +84,41 @@ $count;
            
 
             <!-- Nav Item - Customer -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="customer.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                <i class="fas fa-users"></i>
                     <span>Customer</span></a>
             </li>
-
+           
             <!-- Nav Item - Order -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="order.php">
-                    <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-cart-plus"></i>
                     <span>Order</span></a>
             </li>
-
+           
             <!-- Divider -->
             <!-- Nav Item - Layanan -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="layanan.php">
-                    <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-hands"></i>
                     <span>Layanan</span></a>
             </li>
           <!-- Nav Item - Layanan -->
-             <li class="nav-item">
+             <li class="nav-item active">
                 <a class="nav-link" href="transaksi.php">
-                    <i class="fas fa-fw fa-table"></i>
+                <i class="far fa-sticky-note"></i>
                     <span>Transaksi</span></a>
             </li>
+            
            <!-- Nav Item - Layanan -->
-             <li class="nav-item">
+             <li class="nav-item active">
                 <a class="nav-link" href="laporan.php">
-                    <i class="fas fa-fw fa-table"></i>
+                <i class="fas fa-book"></i>
                     <span>Laporan</span></a>
             </li>
 
-            <hr class="sidebar-divider d-none d-md-block m-0">
+            
 
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
@@ -189,25 +190,11 @@ $count;
   <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
   
   <?php while($row = mysqli_fetch_assoc($query)):?>
-    <button class="dropdown-item" type="button"><i class="far fa-user"></i> Konsumen : <?= $row['nama_pemesan'];?><br>Layanan : <span class="text-danger"><?= $row['layanan'];?></span><br> Jumlah: <?= $row['jumlah'] ?></button>
+    <button class="dropdown-item" type="button"><i class="far fa-user"></i> Konsumen : <?= $row['nama_pemesan'];?><br>Layanan : <span class="text-danger"><?= $row['jenis_layanan'];?></span><br> Jumlah: <?= $row['jumlah'] ?></button>
    <?php endwhile;?>
     
   </div>
 </div>
-                        <!-- <div class="btn-group">
-        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
-          Action
-        </button>
-        <div class="dropdown-menu">
-       
-        <a class="dropdown-item" href="#"></a>
-        
-        </div>
-  </div> -->
-
-
-                        <!-- <i class="fa fa-bell mt-4" aria-hidden="true" id="noti_number"></i> -->
-                         <!-- batas -->
                         
 
                         <div class="topbar-divider d-none d-sm-block"></div>
