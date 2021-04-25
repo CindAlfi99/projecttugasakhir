@@ -1,4 +1,7 @@
 <?php require 'template/header.php';
+$query = mysqli_query($connection, "SELECT * FROM order_masuk WHERE DATE(tanggal_pesan) = CURDATE()");
+$count = mysqli_num_rows($query); 
+$count;
 
   ?>
   <!-- menu -->
@@ -21,8 +24,8 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Total Pemesanan</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
+                                                Total Pesan Hari Ini</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $count ?></div>
                                         </div>
                                         <div class="col-auto">
                                         <i class="fas fa-cart-plus"></i>
