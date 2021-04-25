@@ -1,119 +1,51 @@
 <?php
-//koneksi
-$conn= mysqli_connect("localhost", "root", "","rumahlaundry381");
-if (!$conn) {
-	exit("Sorry, Connection error..");
-}
-$val=$_GET["value"];
-$val_M = mysqli_real_escape_string($conn, $val);
-//kondisi
-if($val == 'satuan'){
-$sql="SELECT * FROM laundry_satuan";
-$result= mysqli_query($conn, $sql);
+require '../config/config.php';
 
-if (mysqli_num_rows($result)>0) {
-
-	echo "<select>";
-
-	while ($rows= mysqli_fetch_assoc($result)) {
-        echo "<option value=".$rows['item'].">".$rows['item']." Harga :".$rows['harga']."</option>";
-
-	}
-
-	echo "</select>";
-  
+if ($_GET["jenis"]) {
+    $val=$_GET["jenis"];
+    $val_M = mysqli_real_escape_string($conn, $val);
     
-
-	
-} else {
-	echo "<select>
-			<option>Select Layanan</option>
-		</select>";
-}
-}
-
-else if($val == 'shoes'){
-    $sql="SELECT * FROM laundry_sepatu";
+    $layanan = array(
+        "kiloan" => "laundry_kiloan",
+        "satuan" => "laundry_satuan",
+        "shoes" => "laundry_sepatu",
+        "karpet" => "laundry_karpet",
+    );
+    
+    $sql="SELECT * FROM " . $layanan[$val];
     $result= mysqli_query($conn, $sql);
     
     if (mysqli_num_rows($result)>0) {
-    
         echo "<select>";
-    
         while ($rows= mysqli_fetch_assoc($result)) {
             echo "<option value=".$rows['item'].">".$rows['item']." Harga :".$rows['harga']."</option>";
         }
-    
         echo "</select>";
-        
     } else {
         echo "<select>
-                <option>Select Drink</option>
+                <option>Select Layanan</option>
             </select>";
     }
-    }
-    else if($val == 'karpet'){
-        $sql="SELECT * FROM laundry_karpet";
-        $result= mysqli_query($conn, $sql);
-        
-        if (mysqli_num_rows($result)>0) {
-        
-            echo "<select>";
-        
-            while ($rows= mysqli_fetch_assoc($result)) {
-                echo "<option value=".$rows['item'].">".$rows['item']." Harga :".$rows['harga']."</option>";
-            }  
-        
-            echo "</select>";
-            
-        } else {
-            echo "<select>
-                    <option>Select Drink</option>
-                </select>";
-        }
-        }
-        else if($val == 'kiloan'){
-            $sql="SELECT * FROM laundry_kiloan";
-            $result= mysqli_query($conn, $sql);
-            
-            if (mysqli_num_rows($result)>0) {
-            
-                echo "<select>";
-            
-                while ($rows= mysqli_fetch_assoc($result)) {
-                    echo "<option value=".$rows['item'].">".$rows['item']." Harga :".$rows['harga']."</option>";
-                }
-            
-                echo "</select>";
-                
-            } else {
-                echo "<select>
-                        <option>Select Drink</option>
-                    </select>";
-            }
-            }
-            // $no_resi = (rand(1, 1000000). "<br>");
-            // echo $no_resi;
-            
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman nomor_resi</title>
-</head>
-<body>
+} else {
+    $val = $_POST;
+    $length = count($_POST['layanan']);
+    $no_resi = rand(1000, 9999);
+    $nama = $_POST['nama'];
+    $no_wa = $_POST['no_wa'];
+    $alamat = $_POST['alamat'];
+    $status = 'jemput';
+    $tgl_pesan = date('Y-m-d H:i:s');
+    $tgl_selesai = date('Y-m-d H:i:s', time()+172800);
+    $layanan = $_POST['layanan'];
 
-<?php if(isset($_POST['submit'])):?>
-                <!-- var_dump($_POST['nama']); -->
-               Nama item : <?= $_POST['nama']; ?>
-               Alamat : <?= $_POST['alamat']; ?>
-                
-               
-            <?php endif; ?>
-<table>
-  
-</body>
-</html>
+    for ($i=0; $i < $length; $i++) { 
+        $sql="INSERT INTO order_masuk (no_resi, nama, no_wa, alamat, jenis, item, jml_item, harga, status, tanggal_pesan, tanggal_selesai)";
+        $sql.=' VALUES ("'.$no_resi.'", "'.$nama.'", "'.$no_wa.'", "'.$alamat.'", "'.$layanan[$i]['jenis'].'", "'.$layanan[$i]['item'].'", '.$layanan[$i]['jml_item'].', 0, "'.$status.'", "'.$tgl_pesan.'", "'.$tgl_selesai.'" )';
+        $result = mysqli_query($conn, $sql);
+        if (!$result) {
+            die('Invalid query: ' . mysqli_error($conn));
+        }
+    }
+    echo json_encode(array('status' => 'berhasil'));
+}
+?>

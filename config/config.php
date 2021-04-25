@@ -1,5 +1,7 @@
 <?php 
-$con = mysqli_connect('localhost','root','','rumahlaundry381');
+$conn = mysqli_connect('localhost','root','','rumahlaundry381');
 
-
+if (!$conn) {
+  exit("Sorry, Connection error..");
+}
 ?>

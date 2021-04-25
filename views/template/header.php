@@ -1,9 +1,7 @@
 <?php
-//  require '../../config/base_url.php'; 
-// require '../../config/config.php';
 require '../config/config.php';
 require '../config/base_url.php'; 
-$query = mysqli_query($con, "SELECT * FROM laundry_satuan");?>
+?>
 <!doctype html>
 <html lang="en">
   <head>
