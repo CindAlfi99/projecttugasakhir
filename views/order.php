@@ -1,14 +1,12 @@
 <?php require 'template/header.php'; ?>
-<div class="container mt-5 pt-5">
-  <div class="row ">
+<div class="container my-5 pt-5">
+  <div class="row">
     <div class="col-md-5">
-      <h1>Ingin melakukan pemesanan?</h1>
-      <p>Jika konsumen ingin melakukan pemesanan silakan isi form pemesanan di samping dan konfirmasi melalui kontak Admin di bawah. Pastikan nomor HP yang dicantumkan sama pada nomor HP saat melakukan konfirmasi. Serta cek kembali nomor resi dengan benar agar segera diproses. <br><br>
-        <img src="<?= BASE_URL; ?>asset/img/lokasi.png" width="23" height="23" alt=""> Jl. May Zen, Sei Selincah
-        <br> <br>
-        <img src="<?= BASE_URL; ?>asset/img/email.png" width="23" height="23" alt=""> acindi38@gmail.com
-        <br><br>
-        <img src="<?= BASE_URL; ?>asset/img/phone-call.png" width="25" height="25" alt=""> 0821-4372-2233 ( <i>Hanya melakukan konfirmasi No.resi dan cek nomor</i>). </p>
+      <h2 class="h3">Ingin melakukan pemesanan?</h2>
+      <p>Jika konsumen ingin melakukan pemesanan silakan isi form pemesanan di samping dan konfirmasi melalui kontak Admin di bawah. Pastikan nomor HP yang dicantumkan sama pada nomor HP saat melakukan konfirmasi. Serta cek kembali nomor resi dengan benar agar segera diproses.</p>
+      <p><img src="<?= BASE_URL; ?>asset/img/lokasi.png" width="23" height="23" alt=""> Jl. May Zen, Sei Selincah</p>
+      <p><img src="<?= BASE_URL; ?>asset/img/email.png" width="23" height="23" alt=""> acindi38@gmail.com</p>
+      <p><img src="<?= BASE_URL; ?>asset/img/phone-call.png" width="25" height="25" alt=""> 0821-4372-2233 ( <i>Hanya melakukan konfirmasi No.resi dan cek nomor</i>).</p>
     </div>
     <div class="col-md-7">
       <form id="form-order">
