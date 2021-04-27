@@ -46,6 +46,8 @@ $query = mysqli_query($connection, "SELECT * FROM order_masuk");
                     <a href="status.php?id=<?= $row['id'] ?>&status=proses" class="btn btn-outline-warning">Proses</a>
                   <?php } elseif ($row['status'] === 'proses') {?>
                     <a href="status.php?id=<?= $row['id'] ?>&status=selesai" class="btn btn-outline-warning">Selesai</a>
+                  <?php } elseif ($row['status'] === 'selesai') {?>
+                    <a href="status.php?id=<?= $row['id'] ?>&status=lunas" class="btn btn-outline-warning">Lunas</a>
                   <?php } ?>
                 </td>
               </tr>

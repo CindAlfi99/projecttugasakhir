@@ -26,8 +26,33 @@
     <!-- Page level custom scripts -->
     <!-- <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script> -->
+    
+    <!-- <script src="ajax/customer.js"></script> -->
     <script src="ajax/ajax.js"></script>
-   
+    <script>
+    $(document).on('click','#tombolUbah', function(){
+let id = $(this).data('id');
+let nama = $(this).data('nama');
+let wa = $(this).data('wa');
+let alamat = $(this).data('alamat');
+let layanan = $(this).data('layanan');
+let item = $(this).data('item');
+let pesan = $(this).data('pesan');
+let selesai = $(this).data('selesai');
+
+$('#id').val(id);
+$('.modal-body #nama_pemesan').val(nama);
+$('.modal-body #no_wa').val(wa);
+$('.modal-body #alamat_jemput').val(alamat);
+$('.modal-body #jenis_layanan').val(layanan);
+$('.modal-body #jenis_item').val(item);
+$('.modal-body #tgl_pesan').val(pesan);
+$('.modal-body #tgl_selesai').val(selesai);
+
+
+
+    })
+    </script>
 
 
 
