@@ -1,5 +1,6 @@
 <?php require 'template/header.php';
-$query = mysqli_query($connection, "SELECT * FROM order_masuk");?>
+$query = mysqli_query($connection, "SELECT * FROM order_masuk");
+?>
 <div class="container">
 
 <div class="row">
@@ -37,7 +38,9 @@ $query = mysqli_query($connection, "SELECT * FROM order_masuk");?>
       <td><?=$row['nama_pemesan'] ?></td>
       <th><?=$row['total_bayar'] ?></th>
       <th><?=$row['tanggal_selesai'] ?></th>
-      <th><?=$row['proses'] ?></th>
+      <th>
+       <a href="status.php?id=<?=$row['id']?>&status=<?=$row['status']?>" name="submit"class="btn btn-outline-warning" ><?= $row['status']?></a>
+      
       <td></td>
     </tr>
 <?php  endwhile;?>

@@ -27,10 +27,10 @@
             <label>Layanan</label>
             <select name="layanan[0][jenis]" class="form-control" required onchange="my_fun(this.value, 0);">
               <option selected>Pilih..</option>
-              <option value="kiloan">Kiloan</option>
-              <option value="satuan">Satuan</option>
-              <option value="karpet">Karpet</option>
-              <option value="shoes">Sepatu</option>
+              <option value="Kiloan">Kiloan</option>
+              <option value="Satuan">Satuan</option>
+              <option value="Karpet">Karpet</option>
+              <option value="Sepatu">Sepatu</option>
             </select>
           </div>
           <div class="form-group col-md-7">

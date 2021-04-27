@@ -1,7 +1,7 @@
 <?php require '../config/DB.php';
 
-$query = mysqli_query($connection, "SELECT * FROM order_masuk WHERE proses='jemput'");
-$querys = mysqli_query($connection, "SELECT * FROM users ");
+$query = mysqli_query($connection, "SELECT * FROM order_masuk WHERE status='jemput'");
+$querys = mysqli_query($connection, "SELECT * FROM users");
 $user = mysqli_fetch_assoc($querys);
 $count = mysqli_num_rows($query); 
 $count;
@@ -65,6 +65,7 @@ $count;
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
                 <a class="nav-link" href="admin.php">
+                
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
