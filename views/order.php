@@ -19,6 +19,8 @@
             <label for="wa">No.Telp (WA)</label>
             <input type="number" name="no_wa" class="form-control" required id="wa">
           </div>
+          
+          
           <div class="form-group col-md-12">
             <label for="address col-md-12">Alamat </label>
             <textarea name="alamat" class="form-control" required id="address" placeholder="Masukkan Alamat Penjemputan"></textarea>
@@ -43,6 +45,7 @@
             <label>Jumlah</label>
             <input type="number" name="layanan[0][jml_item]" class="form-control">
           </div>
+          
           <div class="form-group col-md-2 offset-md-10">
             <button type="button" class="btn btn-link btn-tambah">Tambah +</button>
           </div>

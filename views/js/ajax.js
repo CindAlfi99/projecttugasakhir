@@ -17,7 +17,7 @@ tombolCari.addEventListener('click', () => {
             }
         }
         ////ekseskusi ajax
-    ajax.open('GET', 'ajax/resii.php?keyword=' + keyword.value, true);
+    ajax.open('GET', 'ajax/resi.php?keyword=' + keyword.value, true);
     ajax.send();
     // }else{
     //     container.innerHTML = 'Masukkan Nomor resi anda!';

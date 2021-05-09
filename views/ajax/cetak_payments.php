@@ -1,13 +1,22 @@
-<?php 
-$keyword = $_GET['keyword'];
-$db = mysqli_connect('localhost','root','','rumahlaundry381');
-$query =  mysqli_query($db, "SELECT DISTINCT no_resi, alamat_jemput,nama_pemesan,tanggal_pesan,tanggal_selesai FROM order_masuk WHERE no_resi = $keyword");
-$perintahQuery = mysqli_query($db,"SELECT order_masuk.id, order_masuk.jenis_layanan, order_masuk.jenis_item, order_masuk.jumlah,order_masuk.ongkir, order_masuk.status, layanan.jenis_item, layanan.satuan, layanan.harga FROM order_masuk JOIN layanan ON order_masuk.jenis_item = layanan.jenis_item WHERE order_masuk.no_resi = $keyword ");
-
-    
+<?php
+$no_resi = $_GET['no_resi'];
+require '../asset/vendor_pdf/vendor/autoload.php';
+require '../config/DB.php';
+$query =  mysqli_query($connection, "SELECT DISTINCT no_resi, alamat_jemput,nama_pemesan,tanggal_pesan,tanggal_selesai FROM order_masuk WHERE no_resi = $no_resi");
+$perintahQuery = mysqli_query($connection,"SELECT order_masuk.id, order_masuk.jenis_layanan, order_masuk.jenis_item, order_masuk.jumlah,order_masuk.ongkir, order_masuk.status, layanan.jenis_item, layanan.satuan, layanan.harga FROM order_masuk JOIN layanan ON order_masuk.jenis_item = layanan.jenis_item WHERE order_masuk.no_resi = $no_resi ");
 $join_tbl = mysqli_fetch_assoc($query);
-$rows[] = $row;
-?>
+
+
+
+
+$status = $_GET['status'];
+if(isset($status)){
+    $query =mysqli_query($connection, "UPDATE order_masuk SET status='$status' WHERE no_resi=$no_resi");
+    if(!$query ) {
+        die('Invalid query: ' . mysqli_error($connection));
+    }
+    
+}?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,7 +27,7 @@ $rows[] = $row;
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <title>Cek Resi</title>
+    <title>Hello, world!</title>
     <style>body{
     margin-top:20px;
     color: #484b51;
@@ -135,7 +144,13 @@ hr {
 .align-bottom {
     vertical-align: bottom!important;
 }
-
+@media print {
+    
+    .hidden-print,
+    .hidden-print * {
+        display: none !important;
+    }
+}
 </style>
   </head>
   <body>
@@ -144,7 +159,16 @@ hr {
       
 
         <div class="page-tools">
-          
+            <div class="action-buttons">
+                <button class="btn bg-white btn-light mx-1px text-95 hidden-print"  id ="btnPrint" data-title="Print">
+                    <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
+                    Print
+                </button>
+                <button class="btn bg-white btn-light mx-1px text-95 hidden-print" href="#" data-title="PDF">
+                    <i class="mr-1 fa fa-file-pdf-o text-danger-m1 text-120 w-2"></i>
+                    Export
+                </button>
+            </div>
         </div>
     </div>
 
