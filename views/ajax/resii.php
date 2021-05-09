@@ -1,22 +1,13 @@
-<?php
-$no_resi = $_GET['no_resi'];
-require '../asset/vendor_pdf/vendor/autoload.php';
-require '../config/DB.php';
-$query =  mysqli_query($connection, "SELECT DISTINCT no_resi, alamat_jemput,nama_pemesan,tanggal_pesan,tanggal_selesai FROM order_masuk WHERE no_resi = $no_resi");
-$perintahQuery = mysqli_query($connection,"SELECT order_masuk.id, order_masuk.jenis_layanan, order_masuk.jenis_item, order_masuk.jumlah,order_masuk.ongkir, order_masuk.status, layanan.jenis_item, layanan.satuan, layanan.harga FROM order_masuk JOIN layanan ON order_masuk.jenis_item = layanan.jenis_item WHERE order_masuk.no_resi = $no_resi ");
+<?php 
+$keyword = $_GET['keyword'];
+$db = mysqli_connect('localhost','root','','rumahlaundry381');
+$query =  mysqli_query($db, "SELECT DISTINCT no_resi, alamat_jemput,nama_pemesan,tanggal_pesan,tanggal_selesai FROM order_masuk WHERE no_resi = $keyword");
+$perintahQuery = mysqli_query($db,"SELECT order_masuk.id, order_masuk.jenis_layanan, order_masuk.jenis_item, order_masuk.jumlah,order_masuk.ongkir, order_masuk.status, layanan.jenis_item, layanan.satuan, layanan.harga FROM order_masuk JOIN layanan ON order_masuk.jenis_item = layanan.jenis_item WHERE order_masuk.no_resi = $keyword ");
+
+    
 $join_tbl = mysqli_fetch_assoc($query);
 
-
-
-
-$status = $_GET['status'];
-if(isset($status)){
-    $query =mysqli_query($connection, "UPDATE order_masuk SET status='$status' WHERE no_resi=$no_resi");
-    if(!$query ) {
-        die('Invalid query: ' . mysqli_error($connection));
-    }
-    
-}?>
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,7 +18,7 @@ if(isset($status)){
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <title>Hello, world!</title>
+    <title>Cek Resi</title>
     <style>body{
     margin-top:20px;
     color: #484b51;
@@ -144,34 +135,20 @@ hr {
 .align-bottom {
     vertical-align: bottom!important;
 }
-@media print {
-    
-    .hidden-print,
-    .hidden-print * {
-        display: none !important;
-    }
-}
+
 </style>
   </head>
   <body>
+  <?php if(mysqli_num_rows($query) > 0):?>
     <div class="page-content container">
     <div class="page-header text-blue-d2">
       
 
         <div class="page-tools">
-            <div class="action-buttons">
-                <button class="btn bg-white btn-light mx-1px text-95 hidden-print"  id ="btnPrint" data-title="Print">
-                    <i class="mr-1 fa fa-print text-primary-m1 text-120 w-2"></i>
-                    Print
-                </button>
-                <button class="btn bg-white btn-light mx-1px text-95 hidden-print" href="#" data-title="PDF">
-                    <i class="mr-1 fa fa-file-pdf-o text-danger-m1 text-120 w-2"></i>
-                    Export
-                </button>
-            </div>
+          
         </div>
     </div>
-
+    
     <div class="container px-0">
         <div class="row mt-4">
             <div class="col-12 col-lg-10 offset-lg-1">
@@ -197,9 +174,9 @@ hr {
 
                 <div class="row">
                     <div class="col-sm-6">
-                        <div>
-                            <span class="text-sm text-grey-m2 align-middle">Nama Pemesan</span>
-                            <span class="text-600 text-110 text-blue align-middle"><?=$join_tbl["no_resi"]?></span>
+                        <div class="text-grey-m2">
+                        <small class="page-info">Nama Pemesan</small>
+                            <span class="text-600 text-110 text-blue align-middle"><?=$join_tbl["nama_pemesan"]?></span>
                         </div>
                         <div class="text-grey-m2">
                             <div class="my-1">
@@ -217,18 +194,18 @@ hr {
                         <hr class="d-sm-none" />
                         <div class="text-grey-m2">
 
-                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Tanggal Pesan</span> <?= $join_tbl["tanggal_pesan"]?></div>
+                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <small class="page-info">Tanggal Pesan</small> <?= $join_tbl["tanggal_pesan"]?></div>
 
-                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Tanggal Selesai</span> <?= $join_tbl["tanggal_selesai"]?></div>
+                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <small class="page-info">Tanggal Selesai</small> <?= $join_tbl["tanggal_selesai"]?></div>
 
-                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <span class="text-600 text-90">Status:</span> <span class="badge badge-warning badge-pill px-25">Belum Lunas</span></div>
+                            <div class="my-2"><i class="fa fa-circle text-blue-m2 text-xs mr-1"></i> <small class="page-info">Status:</small> <span class="badge badge-warning badge-pill px-20">Belum Lunas</span></div>
                         </div>
                     </div>
                     <!-- /.col -->
                 </div>
 
-                <div class="mt-4">
-                    <div class="row text-600 text-white bgc-default-tp1 py-25">
+                <div class="mt-4 col-12">
+                <div class="row text-600 text-white bgc-default-tp1 py-25">
                         <div class="d-none d-sm-block col-1">No</div>
                         <div class="col-9 col-sm-5">Jenis Item</div>
                         <div class="d-none d-sm-block col-4 col-sm-2">Jumlah</div>
@@ -301,8 +278,8 @@ hr {
                     <hr />
 
                     <div>
-                    <span class="text-secondary-d1 text-105"><?=date('Y-m-d H:i:s')?></span><br>
-                        <span class="text-secondary-d1 text-105">Terimakasih</span>
+                    
+                      
                         <!-- <a href="#" class="btn btn-info btn-bold px-4 float-right mt-3 mt-lg-0">Pay Now</a> -->
                     </div>
                 </div>
@@ -310,6 +287,11 @@ hr {
         </div>
     </div>
 </div>
+<?php else:?>
+    <div class="row">
+    <div class="col-md-6">
+   <div class='alert alert-danger alert-dismissible fade show' role='alert'> <strong>Gagal cek!</strong> Periksa kembali nomor resi anda.<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div></div>
+<?php endif; ?>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
