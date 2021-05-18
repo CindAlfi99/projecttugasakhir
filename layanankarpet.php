@@ -95,5 +95,5 @@ Kelebihan :<br>
 </div>
 <!-- batas -->
 </div>
-<?php require '../template/footer.php';?>
+<?php require 'template/footer.php';?>
 
