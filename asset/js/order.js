@@ -4,17 +4,26 @@ btn.addEventListener('click', tambahForm, false)
 const formOrder = document.querySelector('#form-order')
 formOrder.onsubmit = order
 
+// select get jenis layanan
+function getJenisLayanan(str, id) {
+  fetch(`helper.php?jenis=${str}`)
+  .then(res => res.text())
+  .then(data => document.querySelector(`.jenis-item-${id}`).innerHTML = data)
+  .catch(err => console.log(err))
+}
+
+// tambah select layanan
 function tambahForm() {
   const layanan = document.querySelectorAll('.layanan')
   const length = layanan.length
   const jenis = `<div class="form-group col-md-3 layanan">
   <label>Layanan</label>
-  <select name="layanan[${length-1}][jenis]" class="form-control" onchange="my_fun(this.value, ${length-1});">
+  <select name="layanan[${length-1}][jenis]" class="form-control" onchange="getJenisLayanan(this.value, ${length-1});">
     <option selected>Pilih..</option>
-    <option value="kiloan">Kiloan</option>
-    <option value="satuan">Satuan</option>
-    <option value="karpet">Karpet</option>
-    <option value="shoes">Sepatu</option>
+    <option value="Kiloan">Kiloan</option>
+    <option value="Satuan">Satuan</option>
+    <option value="Karpet">Karpet</option>
+    <option value="Sepatu">Sepatu</option>
   </select>
   </div>`
   const item = `<div class="form-group col-md-7 jenis_item">
@@ -32,25 +41,30 @@ function tambahForm() {
   after[after.length - 1].insertAdjacentHTML('afterend', form)
 }
 
+// submit pesanan
 function order(e) {
   e.preventDefault();
   const formData = $('form').serialize()
   fetch('helper.php', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      // 'Content-Type': 'application/json'
+      'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: formData,
   })
-  .then(res => res.text())
-  .then(data => {
-    console.log(data)
-    // let no_resi = JSON.parse(data).no_resi;
-    formOrder.reset()
-    // alert('Pesanan Anda telah tersimpan. Admin kami akan melakukan konfirmasi ke nomor wa atau telpon Anda. Terima kasih');
-    $('#modal-resi').modal('show')
-    $('.modal-body').append(`<p>Nomor Resi yang terdaftar adalah ${data.no_resi}</p>`)
+  .then(res => res.json())
+  .then(({ data }) => {
+    try {
+      formOrder.reset()
+      $('#modal-resi').modal('show')
+      $('.modal-body').append(`
+        <p>Nomor resi untuk pesanan Anda adalah ${data.no_resi}.</p>
+        <p>Petugas Kami akan melakukan konfirmasi melalui nomor telepon yang telah Anda lampirkan.</p>
+        <p>Terima kasih telah menggunakan jasa Kami.</p>
+      `)
+    } catch {
+      throw Error(data);
+    }
   })
   .catch(err => console.log(err))
 }

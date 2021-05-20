@@ -4,18 +4,19 @@
     <div class="col-md-5">
     <!-- modal resi start -->
     <div class="modal" id="modal-resi" tabindex="-1">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Info</h5>
+        <h5 class="modal-title">Pesanan Berhasil</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        <p></p>
+      <div class="modal-body"></div>
+      <hr class="m-0">
+      <div class="p-3 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
       </div>
-    
     </div>
   </div>
 </div>
@@ -45,7 +46,7 @@
           </div>
           <div class="form-group col-md-3 layanan">
             <label>Layanan</label>
-            <select name="layanan[0][jenis]" class="form-control" required onchange="my_fun(this.value, 0);">
+            <select name="layanan[0][jenis]" class="form-control" required onchange="getJenisLayanan(this.value, 0);">
               <option selected>Pilih..</option>
               <option value="Kiloan">Kiloan</option>
               <option value="Satuan">Satuan</option>
@@ -74,14 +75,5 @@
     </div>
   </div>
 </div>
-<p id="no_resi"></p>
-<script>
-  function my_fun(str, id) {
-    fetch(`helper.php?jenis=${str}`)
-    .then(res => res.text())
-    .then(data => document.querySelector(`.jenis-item-${id}`).innerHTML = data)
-    .catch(err => console.log(err))
-  }
-</script>
 
 <?php require 'template/footer.php'; ?>

@@ -54,8 +54,9 @@ if ($_GET["jenis"]) {
             die('Invalid query: ' . mysqli_error($conn));
         }
     }
+
     header('Content-Type: application/json');
-    echo json_encode(array('status' => 'berhasil', 'no_resi' => "$no_resi"));
+    echo json_encode(array('data' => array('status' => 'berhasil', 'no_resi' => "$no_resi")), true);
 }
 ?>
 
