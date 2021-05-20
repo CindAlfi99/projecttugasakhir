@@ -2,6 +2,24 @@
 <div class="container my-5 pt-5">
   <div class="row">
     <div class="col-md-5">
+    <!-- modal resi start -->
+    <div class="modal" id="modal-resi" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Info</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p></p>
+      </div>
+    
+    </div>
+  </div>
+</div>
+    <!-- modal resi end -->
       <h2 class="h3">Ingin melakukan pemesanan?</h2>
       <p>Jika konsumen ingin melakukan pemesanan silakan isi form pemesanan di samping dan konfirmasi melalui kontak Admin di bawah. Pastikan nomor HP yang dicantumkan sama pada nomor HP saat melakukan konfirmasi. Serta cek kembali nomor resi dengan benar agar segera diproses.</p>
       <p><img src="<?= BASE_URL; ?>asset/img/lokasi.png" width="23" height="23" alt=""> Jl. May Zen, Sei Selincah</p>
@@ -56,6 +74,7 @@
     </div>
   </div>
 </div>
+<p id="no_resi"></p>
 <script>
   function my_fun(str, id) {
     fetch(`helper.php?jenis=${str}`)

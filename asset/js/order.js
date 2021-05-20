@@ -41,13 +41,16 @@ function order(e) {
       'Content-Type': 'application/x-www-form-urlencoded',
       // 'Content-Type': 'application/json'
     },
-    body: formData
+    body: formData,
   })
   .then(res => res.text())
   .then(data => {
     console.log(data)
+    // let no_resi = JSON.parse(data).no_resi;
     formOrder.reset()
-    alert('Pesanan Anda telah tersimpan. Petugas kami akan melakukan konfirmasi ke nomor Anda. Terima kasih')
+    // alert('Pesanan Anda telah tersimpan. Admin kami akan melakukan konfirmasi ke nomor wa atau telpon Anda. Terima kasih');
+    $('#modal-resi').modal('show')
+    $('.modal-body').append(`<p>Nomor Resi yang terdaftar adalah ${data.no_resi}</p>`)
   })
   .catch(err => console.log(err))
 }

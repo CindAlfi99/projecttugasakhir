@@ -23,8 +23,12 @@ $row = mysqli_fetch_assoc($result);
 <label for="text"><b>Nama</b></label><br>
 <input class="form-control" type="text" value="<?= $rows[0]['nama_pemesan']?>" placeholder="Default input"></div>
 <div class="col-md-6 mx-auto">
-<label for="text"><b>Status</b></label><br>
-<input class="form-control" type="text" value="<?= $rows[0]['status']?>" placeholder="Default input"></div>
+<label for="text"><b>Status Cucian</b></label><br>
+<input class="form-control" type="text" value="<?= $rows[0]['status_cucian']?>" placeholder="Default input"></div>
+<div class="col-md-6 mx-auto">
+<label for="text"><b>Status Pembayaran</b></label><br>
+<input class="form-control" type="text" value="<?= $rows[0]['status_pembayaran']?>" placeholder="Default input"></div>
+
 <div class="col-md-6 mx-auto">
 <label for="text"><b>Tanggal Masuk</b></label><br>
 <input class="form-control" type="text" value="<?= $rows[0]['tanggal_pesan']?>" placeholder="Default input"></div>
@@ -44,9 +48,12 @@ $row = mysqli_fetch_assoc($result);
 <div class="col-md-6 mx-auto">
 <label for="text"><b> Satuan</b></label><br>
 <input class="form-control" type="text" value="<?= $rows[0]['satuan']?>" placeholder="Default input"></div>
-<div class="col-md-6 mx-auto"> 
+<div class="col-md-6"> 
+<label for="text"><b>Mode Pesan</b></label><br>
+<input class="form-control" type="text" value="<?= $rows[0]['mode']?>" placeholder="Default input">
+<div class="col-md-6"> 
 <label for="text"><b> Harus Dibayar</b></label><br>
-<input class="form-control" type="number" value="123" placeholder="Default input"></div>
+<input class="form-control" type="number" value="<?= $rows[0]['total_bayar']?>" placeholder="Default input">
 
 </div>
 <div class="row mt-3 ml-1">
