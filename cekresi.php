@@ -1,45 +1,26 @@
-<?php require 'template/header.php';
-
-
-
-// if(isset($_POST['submit'])){
-// $cari = $_POST['no_resi'];
-// $result =mysqli_query($con,"SELECT * FROM order_masuk WHERE no_resi LIKE %$cari%"); 
-// };
-// if(isset($_POST['submit'])){
-// $no_resi = $_POST['no_resi'];
-// $query = mysqli_query($con, "SELECT * FROM order_masuk WHERE no_resi =$no_resi");
-// $fetch = mysqli_fetch_assoc($query);
-// if(mysqli_num_rows($query) > 0){
-
-//   header('Location: statuscucian.php');
-// }
-// else{
-//   $err = mysqli_error($con);
-// $message_err = "<div class='alert alert-warning alert-dismissible fade show' role='alert'> <strong>Gagal cek!</strong> Periksa kembali nomor resi anda.<button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button></div>";
-
-// }
-// }
-
-
-?>
+<?php require 'template/header.php'; ?>
 <!-- cek resi -->
 <div class="container my-5 pt-5">
-  <div class="row " id="container">
-    <div class="col-md-6">Lacak <i>status cucian</i> Anda sesuai dengan nomor resi yang diberikan pada saat pemesanan. Pastikan Anda sudah melakukan konfirmasi nomor resi pada Admin. Jika belum silakan konfirmasi terlebih dahulu di kontak bawah ini.
+  <div class="row">
+    <div class="col-md-6 d-flex align-self-center">
+      <p>
+      Lacak status cucian Anda sesuai dengan nomor resi yang diberikan pada saat pemesanan. Pastikan Anda sudah melakukan konfirmasi nomor resi pada Admin. Jika belum silakan konfirmasi terlebih dahulu di kontak bawah ini.
+      </p>
     </div>
-    <div class="col-md-5">
-      <img src="<?= BASE_URL; ?>asset/img/laundry-satuan.png" width="200" height="200" alt="">
+    <div class="col-md-6 d-flex justify-content-center" style="height: 200px">
+      <img src="<?= BASE_URL; ?>asset/img/laundry-satuan.png" alt="" height="100%">
     </div>
   </div>
+  
+  <div id="alert"></div>
 
-  <div class="row mt-2">
-    <div class="col-md-6">
+  <div class="row pt-4 justify-content-md-center">
+    <div class="col-md-6 text-center">
       <div class="form-group">
-        <label for="exampleInputEmail1"><b>Silahkan Cek nomor resi anda</b></label>
-        <input type="number" class="form-control" autofocus placeholder="Masukkan Nomor Resi" aria-describedby="emailHelp" name="keyword" id="keyword">
+        <label for="no-resi"><strong>Silakan Cek nomor resi Anda</strong></label>
+        <input id="no-resi" type="number" class="form-control" autofocus placeholder="Masukkan no resi Anda" aria-describedby="resiHelp" name="no_resi">
       </div>
-      <button type="submit" name="cari" class="btn btn-primary" id="tombol-cari">Cek Resi</button>
+      <button class="btn btn-primary" id="tombol-cari">Cek Resi</button>
     </div>
   </div>
 </div>
