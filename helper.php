@@ -68,7 +68,7 @@ if ($_GET["jenis"]) {
             die('Invalid query: ' . mysqli_error($conn));
         }
         elseif($result){
-            $data['message'] = '<b>Pesanan Baru Masuk</b>';
+            $data['message'] = 'Pesanan Baru Masuk'.date('d-m-Y H:i:s');
             $pusher->trigger('my-channel', 'my-event', $data);
         }
     }

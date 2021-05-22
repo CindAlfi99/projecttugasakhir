@@ -1,5 +1,6 @@
 <?php 
 $keyword = $_GET['keyword'];
+
 $db = mysqli_connect('localhost','root','','rumahlaundry381');
 $query =  mysqli_query($db, "SELECT DISTINCT no_resi, alamat_jemput,nama_pemesan,tanggal_pesan,tanggal_selesai, status_cucian, status_pembayaran FROM order_masuk WHERE no_resi = $keyword");
 $perintahQuery = mysqli_query($db,"SELECT order_masuk.id_order, order_masuk.jenis_layanan, order_masuk.jenis_item, order_masuk.jumlah,order_masuk.ongkir, order_masuk.status_cucian, layanan.jenis_item, layanan.satuan, layanan.harga FROM order_masuk JOIN layanan ON order_masuk.jenis_item = layanan.jenis_item WHERE order_masuk.no_resi = $keyword ");
