@@ -57,7 +57,7 @@
 Kelebihan :<br>
 <h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> 1 Item per Proses</h4><p>Pengerjaan 1 item setiap per proses, sehingga penanganan premium.</p>
 <h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> Mesin Khusus</h4><p>Pengerjaan awalnya dilakukan secara manual, kemudian akan dilanjutkan dengan pengerjaan proses laundry menggunakan mesin khusus untuk karpet.</p>
-<button type="button" class="btn btn-outline-warning mt-2 rounded-pill p-4">Pesan Sekarang!</button>
+<a href="order.php" class="btn btn-outline-warning mt-2 rounded-pill p-4">Pesan Sekarang!</a>
 </div>
 </div>
 <div class="row">
@@ -70,25 +70,25 @@ Kelebihan :<br>
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 20.000</span> /kg <hr><p>Karpet Bulu (Meter 2)</p><p>Etimasi selesai:  6 Hari</p> <br>
- <button type="button" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</a>
 </div>
 <!-- harga 2 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 10.000</span> /kg <hr><p>Karpet Tebal (Meter 2)</p>Etimasi selesai:  6 Hari <br>
- <button type="button" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</a>
 </div>
 <!-- harga 3 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 15.000</span> /kg <hr><p>Karpet Tipis</p>Etimasi selesai:  5 Hari <br>
- <button type="button" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</a>
 </div>
 <!-- harga 4 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 17.000</span> /kg <hr>Etimasi selesai:  6 Jam <br>
- <button type="button" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</a>
 </div>
 
 

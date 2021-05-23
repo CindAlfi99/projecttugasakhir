@@ -81,7 +81,7 @@
   </div>
 </div>
 <!-- batas -->
-<button type="button" class="btn btn-outline-warning mt-2 rounded-pill p-4">Pesan Sekarang!</button>
+<a href="order.php"class="btn btn-outline-warning mt-2 rounded-pill p-4">Pesan Sekarang!</a>
 </div>
 </div>
 
@@ -95,7 +95,7 @@
   <div class="card-body">
     <h5 class="card-title">Fast Clean</h5>
     <p class="card-text"><img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 25.000</span><br>Etimasi Pengerjaan: 1 Hari</p>
-    <a href="#" class="btn btn-outline-primary p-2  rounded-pill">Pesan Luandy</a>
+    <a href="order.php" class="btn btn-outline-primary p-2  rounded-pill">Pesan Luandy</a>
   </div>
 </div>
 </div>
@@ -104,7 +104,7 @@
   <div class="card-body">
     <h5 class="card-title">Deep Clean</h5>
     <p class="card-text"><img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 35.000</span><br>Etimasi Pengerjaan: 4 Hari</p>
-    <a href="#" class="btn btn-outline-primary p-2  rounded-pill">Pesan Laundry</a>
+    <a href="order.php" class="btn btn-outline-primary p-2  rounded-pill">Pesan Laundry</a>
   </div>
 </div></div></div>
 <!-- batas -->

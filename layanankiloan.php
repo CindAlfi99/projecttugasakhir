@@ -78,43 +78,43 @@
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 6.000</span> /kg <hr>Etimasi selesai:  48 Jam <br>
- <button type="button" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</a>
 </div>
 <!-- harga 2 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 10.000</span> /kg <hr>Etimasi selesai:  24 Jam <br>
- <button type="button" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</button>
+ <a href="order.php"class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</a>
 </div>
 <!-- harga 3 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 15.000</span> /kg <hr>Etimasi selesai:  12 Jam <br>
- <button type="button" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</a>
 </div>
 <!-- harga 4 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 17.000</span> /kg <hr>Etimasi selesai:  6 Jam <br>
- <button type="button" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 rounded-pill p-2">Pesan Laundry</a>
 </div>
 <!-- harga 5 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 5.000</span> /kg <hr>Cuci Kering <br>
- <button type="button" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</a>
 </div>
 <!-- harga 6 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 5.000</span> /kg <hr>Setrika <br>
- <button type="button" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</a>
 </div>
 <!-- harga 7 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
 <span style="font-size:50px;"> 20.000</span> /kg <hr>Laundry Express (5 Jam) <br>
- <button type="button" class="btn btn-outline-primary p-2 mt-5 rounded-pill">Pesan Laundry</button>
+ <a href="order.php" class="btn btn-outline-primary p-2 mt-5 rounded-pill">Pesan Laundry</a>
 </div>
 
 

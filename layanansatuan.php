@@ -1,5 +1,5 @@
 <?php require 'template/header.php';
-?>
+$query = mysqli_query($conn, "SELECT * FROM layanan");?>
 
 
 
@@ -57,16 +57,18 @@
 <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.<br>
 <h5>Kelebihan : </h5>
 <h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> 1 Item per Proses</h4><p>Pengerjaan 1 item setiap per proses, sehingga penanganan premium.</p>
-<h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> Tidak Menggunakan Mesin</h4><p>Pengerjaan dilakukan secara manual, sama sekali tidak menggunakan mesin.</p></p><h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> Menggunakan Bahan Khusus</h4><p>Rumah Laundry 381 menggunakan chemical khusus untuk penanganan Laundry Satuan</p><button type="button" class="btn btn-outline-warning mt-2 rounded-pill p-4">Pesan Sekarang!</button></div>
+<h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> Tidak Menggunakan Mesin</h4><p>Pengerjaan dilakukan secara manual, sama sekali tidak menggunakan mesin.</p></p><h4><img src="<?= BASE_URL;?>asset/img/point.png" width="20" height="20"> Menggunakan Bahan Khusus</h4><p>Rumah Laundry 381 menggunakan chemical khusus untuk penanganan Laundry Satuan</p><a href="order.php"class="btn btn-outline-warning mt-2 rounded-pill p-4">Pesan Sekarang!</a></div>
 
 </div>
 <!-- daftar harga -->
-<div class="row mt-5 text-center">
+<div class="row mt-3 text-center">
 <div class="col-md-12"><h3 class="font-weight-bold mt-5 mb-5">List Harga Laundry Satuan</h3></div>
 
 
 <!-- batas table -->
-<table class="table table-striped col-md-11 mx-auto">
+<div class="row  mx-auto">
+<div class="col-12">
+<table class="table table-striped" id="lay">
   <thead class="bg-primary">
     <tr>
       <th scope="col">No</th>
@@ -81,7 +83,7 @@
  while($row= mysqli_fetch_assoc($query)):?>
     <tr>
       <th scope="row"><?= $i++;?></th>
-      <td><?= $row['item'] ?></td>
+      <td><?= $row['jenis_item'] ?></td>
       <td><?= $row['harga'];?></td>
   
     </tr>
@@ -89,6 +91,8 @@
    
   </tbody>
 </table>
+</div>
+</div>
 
 </div>
 <br>
