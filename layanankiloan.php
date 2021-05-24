@@ -1,8 +1,4 @@
-<?php require 'template/header.php';
-
-
-
-?>
+<?php require 'template/header.php';?>
 <!-- slideshow -->
 <br>
 <br>
@@ -110,10 +106,6 @@
 <span style="font-size:50px;"> 5.000</span> /kg <hr>Setrika <br>
  <a href="order.php" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</a>
 </div>
-
-
-
-
 </div>
 <!-- batas -->
 </div>

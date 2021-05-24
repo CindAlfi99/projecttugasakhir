@@ -231,12 +231,17 @@ hr {
                             <div class="col-9 col-sm-5"><?= $row["jenis_item"]?></div>
                             <div class="d-none d-sm-block col-2"><?= $row["jumlah"]?></div>
                             <div class="d-none d-sm-block col-2 text-95"><?= $row["harga"]?></div>
+                            
                             <div class="col-2 text-secondary-d2"><?= $total;?></div>
+                            
                             <?php $ongkir += $row['ongkir'];?>
+                            
 <?php endwhile;?>
                         </div>
                     </div>
-
+                    <?php if($join_tbl['status_cucian'] ==='jemput'):?>
+                    <span>Belum termasuk ongkir</span>(Masih nota Sementara)
+                    <?php endif; ?>
                     <div class="row border-b-2 brc-default-l2"></div>
                     <div class="row mt-3">
                         <div class="col-12 col-sm-7 text-grey-d2 text-95 mt-2 mt-lg-0">
