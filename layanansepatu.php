@@ -53,9 +53,11 @@
 
 
 
-<div class="row mt-5">
 
-<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/running.png" width="300" heigth="100"alt=""></div>
+<div class="row">
+
+</div>
+<div class="row mt-3">
 <div class="col-md-6"><h3>Apa itu Laundry Shoes ?</h3>
 <p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.Dan berfokus pada 2 kategori layanan, yaitu <i>Fast Clean<i> dan <i>Deep Clean.</i></p><br>
 <h3>Kategori Pelayanan :</h3>
@@ -65,7 +67,7 @@
 <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">Fast Clean</button>
   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Deep Clean</button>
 </p>
-<div class="row">
+<div class="row text-center">
   <div class="col">
     <div class="collapse multi-collapse" id="multiCollapseExample1">
       <div class="card card-body">
@@ -86,12 +88,12 @@
 </div>
 
 <!-- daftar harga -->
-<div class="row mt-5 text-center">
-<div class="col-md-12"><h3 class="font-weight-bold mt-5 mb-5">List Harga Laundry Shoes</h3></div>
+<div class="row mt-3 text-center mb-3">
+<div class="col-md-12"><h3 class="font-weight-bold mt-2 mb-5">List Harga Laundry Shoes</h3></div>
 <!-- card -->
 <div class="row mx-auto">
-<div class="col-md-6"><div class="card" style="width: 18rem;">
-  <img src="<?= BASE_URL; ?>asset/img/running.png" class="card-img-top" alt="...">
+<div class="col-md-6"><div class="card" style="width: 20rem;" height="100" width="200">
+ 
   <div class="card-body">
     <h5 class="card-title">Fast Clean</h5>
     <p class="card-text"><img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 25.000</span><br>Etimasi Pengerjaan: 1 Hari</p>
@@ -99,8 +101,8 @@
   </div>
 </div>
 </div>
-<div class="col-md-6"><div class="card" style="width: 17rem;">
-  <img src="<?= BASE_URL; ?>asset/img/running.png" class="card-img-top" alt="...">
+<div class="col-md-6"><div class="card" style="width: 20rem;">
+ 
   <div class="card-body">
     <h5 class="card-title">Deep Clean</h5>
     <p class="card-text"><img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 35.000</span><br>Etimasi Pengerjaan: 4 Hari</p>

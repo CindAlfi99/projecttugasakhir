@@ -50,9 +50,9 @@
 </div>
 <!-- batas -->
 
-<div class="row mt-5">
+<div class="row mt-3">
 
-<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="300" heigth="100"alt=""></div>
+<!-- <div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="300" heigth="100"alt=""></div> -->
 <div class="col-md-6"><h3>Apa itu Laundry Kiloan</h3>
 <p><i>Laundry</i> kiloan merupakan layanan laundry yang pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p></div>
 
@@ -60,11 +60,11 @@
 
 <!-- batas -->
 <!-- promo -->
-<div class="row promo mt-5">
-<div class="col-md-5"> <img src="<?= BASE_URL; ?>asset/img/scale.png" width="300" heigth="100">
+<div class="row promo mt-3">
+<div class="col-md-5"> <img src="<?= BASE_URL; ?>asset/img/scale.png" width="100" heigth="100">
 </div>
 <div class="col-md-7"><h2>PROMO ! Cuci 3KG DISKON Rp 4.000 /kg</h2><p class="mt-3">Jangan lewatkan <i>promo</i> hari ini dengan mencuci 3KG <b>DISKON</b> Rp 4.000 /kg. Penawaran terbatas!! Ayo pesan sekarang!</p><br>
-<button type="button" class="btn btn-outline-warning mt-2 rounded-pill p-4">Ambil Sekarang!</button>
+<button type="button" class="btn btn-outline-warning mt-1 rounded-pill p-4">Ambil Sekarang!</button>
 </div>
 </div>
 <!-- batas -->
@@ -73,7 +73,7 @@
 <h3 class="text-center font-weight-bold mt-5">Price List Laundry Kiloan</h3>
 </div>
 </div>
-<div class="row mt-5 text-center">
+<div class="row mt-1 text-center">
 <!-- harga 1 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
@@ -110,16 +110,11 @@
 <span style="font-size:50px;"> 5.000</span> /kg <hr>Setrika <br>
  <a href="order.php" class="btn btn-outline-primary mt-5 p-2 rounded-pill">Pesan Laundry</a>
 </div>
-<!-- harga 7 -->
-<div class="col-md-3 m-4">
-<img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
-<span style="font-size:50px;"> 20.000</span> /kg <hr>Laundry Express (5 Jam) <br>
- <a href="order.php" class="btn btn-outline-primary p-2 mt-5 rounded-pill">Pesan Laundry</a>
-</div>
+
 
 
 
 </div>
 <!-- batas -->
 </div>
-<?php require '../template/footer.php';?>
+<?php require 'template/footer.php';?>

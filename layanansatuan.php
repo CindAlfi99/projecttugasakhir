@@ -50,9 +50,9 @@ $query = mysqli_query($conn, "SELECT * FROM layanan");?>
 </div>
 <!-- batas -->
 
-<div class="row mt-5">
+<div class="row mt-3">
 
-<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="300" heigth="100"alt=""></div>
+<!-- <div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="150" heigth="90"alt=""></div> -->
 <div class="col-md-6"><h3>Apa itu Laundry Satuan ?</h3>
 <p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.<br>
 <h5>Kelebihan : </h5>

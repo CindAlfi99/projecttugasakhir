@@ -22,8 +22,8 @@
   </svg>
 </section>
 <section id="features">
-  <div class="container mt-4">
-    <h2 class="text-center mb-5 font-weight-bold">Layanan Rumah Laundry 381
+  <div class="container">
+    <h2 class="text-center mb-3 font-weight-bold">Layanan Rumah Laundry 381
     </h2>
 
     <div class="row text-center">
@@ -49,13 +49,13 @@
 </section>
 <!-- batas -->
 <!-- prioritas -->
-<section id="contact" class="mt-3">
+<section id="contact" class="">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <img src="<?= BASE_URL; ?>asset/img/contact.png"  alt="" width="400" height="400" style="object-fit: contain;">
+        <img src="<?= BASE_URL; ?>asset/img/contact.png"  alt="" width="300" height="300" style="object-fit: contain;">
       </div>
-      <div class="col-md-6 mt-5">
+      <div class="col-md-6">
         <h2 class="font-weight-bold mt-3">Rumah Laundry 381 Jadikan Kamu Sebagai Prioritas!</h2><br>
         <p>Rumah Laundry 381 selalu memprioritaskan kepuasan pelanggan sebagai bentuk kedekatan dalam menjaga kepercayaan dan kenyamanan saat menggunakan seluruh layanan yang tersedia.</p>
       </div>
@@ -67,7 +67,7 @@
 <!-- mengapa harus rumah laundry -->
 <section id="pricing" class="bg-light">
   <div class="container">
-    <h2 class="text-center mb-3 mt-0 font-weight-bold ">Mengapa harus Rumah Laundry 381?</h2>
+    <h2 class="text-center mb-3 font-weight-bold ">Mengapa harus Rumah Laundry 381?</h2>
     <div class="row text-center">
 
       <div class="col-md-4 ">
@@ -78,7 +78,7 @@
       <div class="col-md-4">
         <img src="<?= BASE_URL; ?>asset/img/pesanonline.png" class="img-fluid bg-primary rounded-circle" alt="">
         <h5 class="pl-4">Order Online</h5>
-        <p>Pesan via Web dan dapatkan promo menarik melalui Aplikasi RL381.</p>
+        <p>Pesan via web dan dapatkan promo menarik melalui Aplikasi web RL381.</p>
       </div>
       <div class="col-md-4">
         <img src="<?= BASE_URL; ?>asset/img/terpercaya.png" class="img-fluid bg-primary rounded-circle" alt="">
@@ -90,15 +90,15 @@
       <div class="col-md-4">
 
         <img src="<?= BASE_URL; ?>asset/img/status.png" class="img-fluid bg-primary rounded-circle" alt="">
-        <h5>Update Status</h5>
-        <p>R381 selalu mengirimkan notifikasi melalui website kami ketika ada update status Laundry kamu.</p>
+        <h5>Antar Jemput </h5>
 
+        <p>Kamu tidak perlu keluar rumah lagi, cukup mitra kami (kurir) yang menjemput dan mengantar barang cucian mu.</p>
       </div>
 
       <div class="col-md-4">
         <img src="<?= BASE_URL; ?>asset/img/antarjemput.png" class="img-fluid bg-primary rounded-circle" alt="">
-        <h5 class="pl-4">Antar Jemput</h5>
-        <p>R381 selalu mengirimkan notifikasi melalui website kami ketika ada update status Laundry kamu.</p>
+        <h5 class="pl-4">Update Status Realtime</h5>
+        <p>RL381 selalu mengirimkan notifikasi melalui aplikasi web kami ketika ada update status Laundry kamu.</p>
 
       </div>
     </div>
@@ -108,7 +108,10 @@
 <section id="jam">
   <div class="container">
     <h2 class="text-center font-weight-bold mt-3">Jam Operasional Rumah Laundry 381 </h2>
+    
+    <h5 class="text-center">Setiap Hari</h5>
     <div class="row text-center mt-5">
+    
       <div class="col-md-4">
         <img width="18px" height="18px" src="<?= BASE_URL; ?>/asset/img/jam.png" alt=""> Laundry 08.00-20.00
         <hr class="bg-light">
@@ -144,7 +147,7 @@
 
         <img width="55px" height="57px" src="<?= BASE_URL; ?>/asset/img/two.png" alt="">
         <br>
-        <p class="mt-4">Isi form pemesanan dan pilih layanan yang dibutuhkan (detail pesanan, jumlah, dll) dan klik pesan.</p>
+        <p class="mt-4">Isi form pemesanan dan pilih layanan yang dibutuhkan (detail pesanan, jumlah, dll) klik pesan dan mendapatkan nomor resi simpan nomor. </p>
 
         <hr class="bg-light">
       </div>
@@ -153,7 +156,7 @@
 
         <img width="55px" height="57px" src="<?= BASE_URL; ?>/asset/img/three.png" alt="">
         <br>
-        <p class="mt-4">Konfirmasi pesanan Anda (no. resi yang terdapat pada web, nomor hp pemesanan) pada nomor wa admin dan cucian diproses.</p>
+        <p class="mt-4">Admin akan melakukan Konfirmasi pesanan pada nomor wa/telpon anda yang telah dicantumkan, beserta nomor resi yang telah terdaftar.</p>
         <hr class="bg-light">
       </div>
 

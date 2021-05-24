@@ -49,9 +49,9 @@
 </div>
 <!-- batas -->
 
-<div class="row mt-5">
+<div class="row mt-3">
 
-<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/carpet.png" width="300" heigth="100"alt=""></div>
+
 <div class="col-md-6"><h3>Apa itu Laundry Karpet ?</h3>
 <p>Layanan <i>Laundry</i> karpet merupakan layanan khusus laundry karpet yang proses dan transaksinya dilakukan dengan menghitung  luas meter karpet customer. Proses laundry menggunakan mesin khusus karpet sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus dan didukung oleh operator mesin yang terlatih dan berpengalaman.</p><br>
 Kelebihan :<br>
@@ -65,7 +65,7 @@ Kelebihan :<br>
 <h3 class="text-center font-weight-bold mt-5">Price List Laundry Karpet</h3>
 </div>
 </div>
-<div class="row mt-5 text-center">
+<div class="row mt-3 text-center">
 <!-- harga 1 -->
 <div class="col-md-3 m-4">
 <img src="<?= BASE_URL;?>asset/img/rupiah.png" width="30" height="30">
