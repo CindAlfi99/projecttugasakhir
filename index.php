@@ -5,7 +5,8 @@
   <div class="banner">
     <div class="container">
       <div class="row ">
-        <div class="col-md-6">
+      
+        <div class="col-md-6 ">
           <h4 class="title">Laundry Online At RUMAH LAUNDRY 381!</h4>
           <p class="moto">Bersama Rumah Laundry 381, Pesan Laundry #DirumahAja</p>
           <a href="order.php" class="btn btn-warning">ORDER NOW</a>
@@ -13,6 +14,7 @@
         <div class="col-md-6">
           <img class="img" src="<?= BASE_URL; ?>asset/img/logo.png" alt="" width="500" height="400">
         </div>
+
       </div>
     </div>
   </div>
