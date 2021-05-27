@@ -8,16 +8,9 @@ if ($_GET["jenis"]) {
     $val=$_GET["jenis"];
     $val_M = mysqli_real_escape_string($conn, $val);
     
-    // $layanan = array(
-    //     "kiloan" => "laundry_kiloan",
-    //     "satuan" => "laundry_satuan",
-    //     "shoes" => "laundry_sepatu",
-    //     "karpet" => "laundry_karpet",
-    // );
-    
     $sql="SELECT * FROM layanan WHERE jenis_layanan ='$val'";
     $result= mysqli_query($conn, $sql);
- 
+
     if (mysqli_num_rows($result)>0) {
         echo "<select>";
         while ($rows= mysqli_fetch_assoc($result)) {
@@ -33,15 +26,13 @@ if ($_GET["jenis"]) {
     $options = array(
         'cluster' => 'ap1',
         'useTLS' => true
-      );
-      $pusher = new Pusher\Pusher(
+    );
+    $pusher = new Pusher\Pusher(
         'ee0a2d4a7d1a6c8ef4f8',
         'cadca09b4c0acaaeaaed',
         '1206705',
         $options
-      );
-    
-     
+    );
     $val = $_POST;
     $length = count($_POST['layanan']);
     $no_resi = rand(1000, 9999);
@@ -58,9 +49,8 @@ if ($_GET["jenis"]) {
     $harga = $join_tbl['harga'];
     $ongkir = 10000;
     $total_byr = $join_tbl['harga'] + $ongkir * $join_tbl['jumlah'] - 10000 ;
-   
+
     for ($i=0; $i < $length; $i++) { 
- 
         $sql="INSERT INTO order_masuk (no_resi, nama_pemesan, no_wa, alamat_jemput, jenis_layanan, jenis_item, jumlah,satuan, harga,ongkir,total_bayar, status_cucian,status_pembayaran,mode, tanggal_pesan, tanggal_selesai)";
         $sql.=' VALUES ("'.$no_resi.'", "'.$nama.'", "'.$no_wa.'", "'.$alamat.'", "'.$layanan[$i]['jenis'].'", "'.$layanan[$i]['item'].'", '.$layanan[$i]['jml_item'].',"'.$satuan.'","'.$harga.'","'.$ongkir.'","'.$total_byr.'", "'.$status.'", "'.$status_pembayaran.'", "'.$mode.'","'.$tgl_pesan.'", "'.$tgl_selesai.'")';
         $result = mysqli_query($conn, $sql);
@@ -68,7 +58,7 @@ if ($_GET["jenis"]) {
             die('Invalid query: ' . mysqli_error($conn));
         }
         elseif($result){
-            $data['message'] = '<b>Pesanan Baru Masuk</b>';
+            $data['message'] = 'Pesanan Baru Masuk'.date('d-m-Y H:i:s');
             $pusher->trigger('my-channel', 'my-event', $data);
         }
     }
@@ -76,5 +66,3 @@ if ($_GET["jenis"]) {
     header('Content-Type: application/json');
     echo json_encode(array('data' => array('status' => 'berhasil', 'no_resi' => "$no_resi")), true);
 }
-?>
-
