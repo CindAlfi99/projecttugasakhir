@@ -68,7 +68,7 @@ $rows[] = $row;
     </div>
   </div>
 <?php } else { ?>
-  <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+  <div class='alert alert-danger alert-dismissible fade show mt-4' role='alert'>
     <strong>Gagal!</strong> Nomor resi yang Anda masukkan tidak terdaftar.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
