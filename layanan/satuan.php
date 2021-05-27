@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/template/header.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/rl381/template/header.php'; ?>
 
 <body>
-	<?php require $_SERVER['DOCUMENT_ROOT'] . '/template/navbar.php'; ?>
+	<?php require $_SERVER['DOCUMENT_ROOT'] . '/rl381/template/navbar.php'; ?>
 	<!-- slideshow -->
 	<div class="container pt-5 my-5">
 		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
@@ -49,7 +49,7 @@
 
 		<div class="row mt-5">
 
-			<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="300" heigth="100" alt=""></div>
+			
 			<div class="col-md-6">
 				<h3>Apa itu Laundry Satuan ?</h3>
 				<p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.<br>
@@ -61,7 +61,7 @@
 				</p>
 				<h4><img src="<?= BASE_URL; ?>asset/img/point.png" width="20" height="20"> Menggunakan Bahan Khusus</h4>
 				<p>Rumah Laundry 381 menggunakan chemical khusus untuk penanganan Laundry Satuan</p>
-				<a href="order.php" class="btn btn-lg btn-warning btn-order text-white">Pesan Sekarang!</a>
+				<a href="../order.php" class="btn btn-lg btn-warning btn-order text-white">Pesan Sekarang!</a>
 			</div>
 
 		</div>
@@ -71,7 +71,7 @@
 				<h3 class="h3 text-center">List Harga Laundry Satuan</h3>
 			</div>
 			<!-- batas table -->
-			<table class="table table-striped col-md-12">
+			<table class="table table-striped col-md-12" id="lay">
 				<thead class="bg-primary">
 					<tr>
 						<th scope="col">No</th>
@@ -81,11 +81,14 @@
 					</tr>
 				</thead>
 				<tbody>
-					<?php $i = 1;
+					<?php 
+					$conn = mysqli_connect('localhost','root','','rumahlaundry381');
+					$i = 1;
+					$query = mysqli_query($conn,"SELECT * FROM layanan");
 					while ($row = mysqli_fetch_assoc($query)) : ?>
 						<tr>
 							<th scope="row"><?= $i++; ?></th>
-							<td><?= $row['item'] ?></td>
+							<td><?= $row['jenis_item'] ?></td>
 							<td><?= $row['harga']; ?></td>
 						</tr>
 					<?php endwhile; ?>
@@ -101,7 +104,7 @@
 		
 	</div>
 	<!-- footer -->
-	<?php require $_SERVER['DOCUMENT_ROOT'] . '/template/footer.php'; ?>
+	<?php require $_SERVER['DOCUMENT_ROOT'] . '/rl381/template/footer.php'; ?>
 	<!-- batas -->
 </body>
 
