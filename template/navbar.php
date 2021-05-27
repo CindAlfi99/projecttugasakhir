@@ -20,10 +20,10 @@
 							Layanan
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanansatuan.php">Laundry Satuan</a>
-							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanankiloan.php">Laundry Kiloan</a>
-							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanankarpet.php">Laundry Karpet</a>
-							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanansepatu.php">Laundry Shoes</a>
+							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanan/satuan.php">Laundry Satuan</a>
+							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanan/kiloan.php">Laundry Kiloan</a>
+							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanan/karpet.php">Laundry Karpet</a>
+							<a class="dropdown-item text-secondary font-weight-bold text-capitalize" href="<?= BASE_URL; ?>layanan/sepatu.php">Laundry Shoes</a>
 						</div>
 					</li>
 

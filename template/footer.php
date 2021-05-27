@@ -26,10 +26,10 @@
             </div>
             <div class="col-6 col-md-3 offset-md-1 layanan mt-2 mt-md-0">
                 <h3 class="h5">Layanan Laundry</h3>
-                <p class="mt-4"><a href="#" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="25" height="25"> Kiloan</a></p>
-                <p><a href="#" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/tshirt.png" width="25" height="25"> Satuan</a></p>
-                <p><a href="#" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/carpet.png" width="25" height="25"> Karpet</a></p>
-                <p><a href="#" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/running.png" width="25" height="25"> Sepatu</a></p>
+                <p class="mt-4"><a href="<?= BASE_URL ?>layanan/kiloan.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="25" height="25"> Kiloan</a></p>
+                <p><a href="<?= BASE_URL ?>layanan/satuan.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/tshirt.png" width="25" height="25"> Satuan</a></p>
+                <p><a href="<?= BASE_URL ?>layanan/karpet.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/carpet.png" width="25" height="25"> Karpet</a></p>
+                <p><a href="<?= BASE_URL ?>layanan/sepatu.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/running.png" width="25" height="25"> Sepatu</a></p>
             </div>
         </div>
     </div>

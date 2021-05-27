@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 
-<?php require 'template/header.php'; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/template/header.php'; ?>
 
 <body>
-	<?php require 'template/navbar.php'; ?>
+	<?php require $_SERVER['DOCUMENT_ROOT'] . '/template/navbar.php'; ?>
 	<div class="container pt-5 my-5">
 		<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
@@ -101,7 +101,7 @@
 		<!-- batas -->
 	</div>
 	<!-- footer -->
-	<?php require 'template/footer.php'; ?>
+	<?php require $_SERVER['DOCUMENT_ROOT'] . '/template/footer.php'; ?>
 	<!-- batas -->
 </body>
 
