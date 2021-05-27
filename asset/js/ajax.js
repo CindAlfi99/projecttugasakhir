@@ -13,6 +13,6 @@ tombolCari.addEventListener('click', () => {
         }
     }
     //ekseskusi ajax
-    ajax.open('GET', 'ajax/resi.php?keyword=' + keyword.value, true);
+    ajax.open('GET', 'resi.php?keyword=' + keyword.value, true);
     ajax.send();
 })

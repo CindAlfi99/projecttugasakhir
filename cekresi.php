@@ -1,28 +1,43 @@
+<!doctype html>
+<html lang="en">
+
 <?php require 'template/header.php'; ?>
-<!-- cek resi -->
-<div class="container my-5 pt-5">
-  <div class="row">
-    <div class="col-md-6 d-flex align-self-center">
-      <p>
-      Lacak status cucian Anda sesuai dengan nomor resi yang diberikan pada saat pemesanan. Pastikan Anda sudah melakukan konfirmasi nomor resi pada Admin. Jika belum silakan konfirmasi terlebih dahulu di kontak bawah ini.
-      </p>
-    </div>
-    <div class="col-md-6 d-flex justify-content-center" style="height: 200px">
-      <img src="<?= BASE_URL; ?>asset/img/laundry-satuan.png" alt="" height="100%">
-    </div>
-  </div>
-  
-  <div id="alert"></div>
 
-  <div class="row pt-4 justify-content-md-center">
-    <div class="col-md-6 text-center">
-      <div class="form-group">
-        <label for="no-resi"><strong>Silakan Cek nomor resi Anda</strong></label>
-        <input id="no-resi" type="number" class="form-control" autofocus placeholder="Masukkan no resi Anda" aria-describedby="resiHelp" name="no_resi">
-      </div>
-      <button class="btn btn-primary" id="tombol-cari">Cek Resi</button>
-    </div>
-  </div>
-</div>
+<body>
+	<?php require 'template/navbar.php'; ?>
+	<!-- cek resi -->
+	<div class="container my-5 pt-5">
+		<div class="row">
+			<div class="col-md-6 d-flex align-self-center">
+				<article>
+					<h1 class="h3">Cek Resi</h1>
+					<p>
+						Lacak status cucian Anda sesuai dengan nomor resi yang diberikan pada saat pemesanan.
+					</p>
+				</article>
+			</div>
+			<div class="col-md-6 d-flex justify-content-center" style="height: 200px">
+				<img src="<?= BASE_URL; ?>asset/img/laundry-satuan.png" alt="" height="100%">
+			</div>
+		</div>
 
-<?php require 'template/footer.php'; ?>
+		<div id="alert" class="mb-4"></div>
+
+		<div class="row justify-content-md-center">
+			<div class="col-md-6 text-center">
+				<div class="form-group">
+					<label for="no-resi"><strong>Silakan Cek nomor resi Anda</strong></label>
+					<input id="no-resi" type="number" class="form-control" autofocus placeholder="Masukkan no resi Anda" aria-describedby="resiHelp" name="no_resi">
+				</div>
+				<button class="btn btn-primary btn-order" id="tombol-cari">Cek Resi</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<?php require 'template/footer.php'; ?>
+	<!-- batas -->
+	<script src="<?= BASE_URL; ?>asset/js/ajax.js"></script>
+</body>
+
+</html>
