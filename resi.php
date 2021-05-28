@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/config/config.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/rl381/config/config.php';
 
 $keyword = $_GET['keyword'];
 
