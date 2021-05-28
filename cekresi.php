@@ -17,7 +17,7 @@
 				</article>
 			</div>
 			<div class="col-md-6 d-flex justify-content-center" style="height: 200px">
-				<img src="<?= BASE_URL; ?>asset/img/laundry-satuan.png" alt="" height="100%">
+				<img src="<?= BASE_URL; ?>/asset/img/search.jpg" alt="" height="100%">
 			</div>
 		</div>
 

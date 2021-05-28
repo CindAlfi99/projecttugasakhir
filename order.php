@@ -75,6 +75,11 @@
 					<input type="submit" value="Order Sekarang" class="btn btn-primary btn-order">
 				</form>
 			</div>
+			<div class="float-right ml-2">
+			<p>Info :</p>
+			<font>Biaya Ongkir sekitar Pusri Rp.<b>15000</b></font>
+			<font>Biaya Ongkir diluar Pusri Rp.<b>15000</b> + biaya penambahan 9000</font>
+			</div>
 		</div>
 	</div>
 	<!-- footer -->
