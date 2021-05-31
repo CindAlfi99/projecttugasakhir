@@ -4,7 +4,7 @@ require __DIR__ . '/vendor/autoload.php';
 
 $query = mysqli_query($conn, "SELECT order_masuk.jenis_item, order_masuk.jumlah, order_masuk.ongkir,layanan.jenis_item, layanan.satuan, layanan.harga FROM order_masuk JOIN layanan ON order_masuk.jenis_item = layanan.jenis_item");
 $join_tbl = mysqli_fetch_assoc($query);
-if ($_GET["jenis"]) {
+if (isset($_GET["jenis"])) {
     $val=$_GET["jenis"];
     $val_M = mysqli_real_escape_string($conn, $val);
     

@@ -53,7 +53,9 @@ function order(e) {
     body: formData,
   })
   .then(res => res.json())
+  
   .then(({ data }) => {
+  
     try {
       formOrder.reset()
       $('#modal-resi').modal('show')
