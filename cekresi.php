@@ -17,7 +17,7 @@
 				</article>
 			</div>
 			<div class="col-md-6 d-flex justify-content-center" style="height: 200px">
-				<img src="<?= BASE_URL; ?>asset/img/laundry-satuan.png" alt="" height="100%">
+				<img src="<?php echo BASE_URL; ?>asset/img/laundry-satuan.png" alt="" height="100%">
 			</div>
 		</div>
 
@@ -37,7 +37,7 @@
 	<!-- footer -->
 	<?php require 'template/footer.php'; ?>
 	<!-- batas -->
-	<script src="<?= BASE_URL; ?>asset/js/ajax.js"></script>
+	<script src="<?php echo BASE_URL; ?>asset/js/ajax.js"></script>
 </body>
 
 </html>

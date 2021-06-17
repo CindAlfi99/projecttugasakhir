@@ -16,7 +16,7 @@
 				<p>Rumah Laundry 381 memiliki fitur dan sistem yang terintergrasi secara <em>online</em> dan sangat memprioritaskan kemudahan konsumen dalam menggunakan jasa dan fitur kami sepraktis mungkin. Serta berfokus pada kebutuhan dan kepuasaan pelanggan ketika menggunakan jasa Laundry kami.</p>
 			</div>
 			<!-- <div class="col-md-6 d-flex justify-content-center">
-				<img class="img-banner" src="<?= BASE_URL; ?>asset/img/logo.png" alt="RL381 Logo">
+				<img class="img-banner" src="<?php echo BASE_URL; ?>asset/img/logo.png" alt="RL381 Logo">
 			</div> -->
 		</div>
 		<hr>
@@ -53,40 +53,40 @@
 			<div class="col-md-3 mb-2 mb-md-0">
 				<div class="card about-card">
 					<div class="card-body" style="height: 100%;">
-						<img src="<?= BASE_URL; ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
+						<img src="<?php echo BASE_URL; ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
 						<p>Laundry Kiloan</p>
 						<p class="mb-4"><em>Laundry</em> kiloan merupakan layanan laundry yang pakaian yang proses dan transaksinya dilakukan dengan menghitung berat item laundry dari pakaian customer.</p>
-						<a href="<?= BASE_URL; ?>layanan/kiloan.php" class="btn btn-outline-primary">Detail</a>
+						<a href="<?php echo BASE_URL; ?>layanan/kiloan.php" class="btn btn-outline-primary">Detail</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 mb-2 mb-md-0">
 				<div class="card about-card">
 					<div class="card-body">
-						<img src="<?= BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
+						<img src="<?php echo BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
 						<p>Laundry Satuan</p>
 						<p class="mb-4"><em>Laundry</em> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p>
-						<a href="<?= BASE_URL; ?>layanan/satuan.php" class="btn btn-outline-primary">Detail</a>
+						<a href="<?php echo BASE_URL; ?>layanan/satuan.php" class="btn btn-outline-primary">Detail</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3 mb-2 mb-md-0">
 				<div class="card about-card">
 					<div class="card-body">
-						<img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
+						<img src="<?php echo BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
 						<p>Laundry Karpet</p>
 						<p class="mb-4">Layanan <em>Laundry</em> Karpet diproses dengan menggunakan mesin khusus sehingga bisa dipastikan kebersihannya satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.</p>
-						<a href="<?= BASE_URL; ?>layanan/karpet.php" class="btn btn-outline-primary">Detail</a>
+						<a href="<?php echo BASE_URL; ?>layanan/karpet.php" class="btn btn-outline-primary">Detail</a>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-3">
 				<div class="card about-card">
 					<div class="card-body">
-						<img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
+						<img src="<?php echo BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
 						<p>Laundry Shoes</p>
 						<p class="mb-4">Layanan <em>Laundry</em> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.</p>
-						<a href="<?= BASE_URL; ?>layanan/sepatu.php" class="btn btn-outline-primary">Detail</a>
+						<a href="<?php echo BASE_URL; ?>layanan/sepatu.php" class="btn btn-outline-primary">Detail</a>
 					</div>
 				</div>
 			</div>

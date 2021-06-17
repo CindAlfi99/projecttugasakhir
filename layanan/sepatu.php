@@ -14,21 +14,21 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="<?= BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
+					<img src="<?php echo BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>First slide label</h5>
 						<p>Some representative placeholder content for the first slide.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="<?= BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
+					<img src="<?php echo BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Second slide label</h5>
 						<p>Some representative placeholder content for the second slide.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="<?= BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
+					<img src="<?php echo BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Third slide label</h5>
 						<p>Some representative placeholder content for the third slide.</p>
@@ -47,7 +47,7 @@
 		<!-- batas -->
 		<!-- batas slideshow -->
 		<div class="row mt-5">
-			<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/running.png" width="300" heigth="100" alt=""></div>
+			<div class="col-md-6"><img src="<?php echo BASE_URL; ?>asset/img/running.png" width="300" heigth="100" alt=""></div>
 			<div class="col-md-6">
 				<h3>Apa itu Laundry Shoes ?</h3>
 				<p>Layanan <i>Laundry</i> Shoes merupakan jenis pelayanan laundry yang dikhususkan untuk pelayanan kebersihan dan perawatan Sepatu.Dan berfokus pada 2 kategori layanan, yaitu <i>Fast Clean<i> dan <i>Deep Clean.</i></p><br>
@@ -86,20 +86,20 @@
 			<div class="row mx-auto">
 				<div class="col-md-6 mb-2 mb-md-0">
 					<div class="card">
-						<img src="<?= BASE_URL; ?>asset/img/running.png" class="card-img-top" alt="...">
+						<img src="<?php echo BASE_URL; ?>asset/img/running.png" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">Fast Clean</h5>
-							<p class="card-text"><img src="<?= BASE_URL; ?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 25.000</span><br>Etimasi Pengerjaan: 1 Hari</p>
+							<p class="card-text"><img src="<?php echo BASE_URL; ?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 25.000</span><br>Etimasi Pengerjaan: 1 Hari</p>
 							<a href="#" class="btn btn-outline-primary p-2  rounded-pill">Pesan Luandy</a>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="card">
-						<img src="<?= BASE_URL; ?>asset/img/running.png" class="card-img-top" alt="...">
+						<img src="<?php echo BASE_URL; ?>asset/img/running.png" class="card-img-top" alt="...">
 						<div class="card-body">
 							<h5 class="card-title">Deep Clean</h5>
-							<p class="card-text"><img src="<?= BASE_URL; ?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 35.000</span><br>Etimasi Pengerjaan: 4 Hari</p>
+							<p class="card-text"><img src="<?php echo BASE_URL; ?>asset/img/rupiah.png" width="30" height="30"><span style="font-size:50px;"> 35.000</span><br>Etimasi Pengerjaan: 4 Hari</p>
 							<a href="#" class="btn btn-outline-primary p-2  rounded-pill">Pesan Laundry</a>
 						</div>
 					</div>

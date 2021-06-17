@@ -70,13 +70,13 @@ $join_tbl = mysqli_fetch_assoc($query);
                         <div class="col-sm-6">
                             <div class="text-grey-m2">
                                 <div class="my-1">
-                                    Nama Pemesan: <?= $join_tbl["nama_pemesan"] ?>
+                                    Nama Pemesan: <?php echo $join_tbl["nama_pemesan"] ?>
                                 </div>
                                 <div class="my-1">
-                                    No Resi: <?= $join_tbl["no_resi"] ?>
+                                    No Resi: <?php echo $join_tbl["no_resi"] ?>
                                 </div>
                                 <div class="my-1">
-                                    Alamat: <?= $join_tbl["alamat_jemput"] ?>
+                                    Alamat: <?php echo $join_tbl["alamat_jemput"] ?>
                                 </div>
                             </div>
                         </div>
@@ -85,16 +85,16 @@ $join_tbl = mysqli_fetch_assoc($query);
                             <hr class="d-sm-none" />
                             <div class="text-grey-m2">
                                 <div class="my-2">
-                                    Tanggal Pesan: <?= $join_tbl["tanggal_pesan"] ?>
+                                    Tanggal Pesan: <?php echo $join_tbl["tanggal_pesan"] ?>
                                 </div>
                                 <div class="my-2">
-                                    Tanggal Selesai: <?= $join_tbl["tanggal_selesai"] ?>
+                                    Tanggal Selesai: <?php echo $join_tbl["tanggal_selesai"] ?>
                                 </div>
                                 <div class="my-2">
-                                    Status Cucian: <span class="badge badge-warning badge-pill px-20"><?= $join_tbl['status_cucian']; ?></span>
+                                    Status Cucian: <span class="badge badge-warning badge-pill px-20"><?php echo $join_tbl['status_cucian']; ?></span>
                                 </div>
                                 <div class="my-2">
-                                    Status Pembayaran: <span class="badge badge-warning badge-pill px-20"><?= $join_tbl['status_pembayaran']; ?></span>
+                                    Status Pembayaran: <span class="badge badge-warning badge-pill px-20"><?php echo $join_tbl['status_pembayaran']; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -121,11 +121,11 @@ $join_tbl = mysqli_fetch_assoc($query);
                                         while ($row = mysqli_fetch_assoc($perintahQuery)) :
                                             $total = $row['harga'] * $row['jumlah'];
                                             $count += $total; ?>
-                                            <th scope="row"><?= $i++; ?></th>
-                                            <td><?= $row["jenis_item"] ?></td>
-                                            <td class="text-center"><?= $row["jumlah"] ?></td>
-                                            <td><?= $row["harga"] ?></td>
-                                            <td><?= $total; ?></td>
+                                            <th scope="row"><?php echo $i++; ?></th>
+                                            <td><?php echo $row["jenis_item"] ?></td>
+                                            <td class="text-center"><?php echo $row["jumlah"] ?></td>
+                                            <td><?php echo $row["harga"] ?></td>
+                                            <td><?php echo $total; ?></td>
                                             <?php $ongkir += $row['ongkir']; ?>
                                         <?php endwhile; ?>
                                     </tr>
@@ -152,11 +152,11 @@ $join_tbl = mysqli_fetch_assoc($query);
                                             <?php if ($ongkir > 10000) : ?>
                                                 <?php $ongkir = $ongkir - 5000;
                                                 $count += $ongkir; ?>
-                                                <span class="text-120 text-secondary-d1"><?= $ongkir; ?></span>
+                                                <span class="text-120 text-secondary-d1"><?php echo $ongkir; ?></span>
                                             <?php elseif ($ongkir == 10000) : ?>
                                                 <?php $count += 10000;
                                                 $ong = 10000; ?>
-                                                <span class="text-120 text-secondary-d1"><?= $ong; ?></span>
+                                                <span class="text-120 text-secondary-d1"><?php echo $ong; ?></span>
                                             <?php endif; ?>
                                         </div>
                                     </div>
@@ -166,7 +166,7 @@ $join_tbl = mysqli_fetch_assoc($query);
                                             Total Bayar
                                         </div>
                                         <div class="col-5">
-                                            <span class="text-110 text-secondary-d1"><?= $count; ?></span>
+                                            <span class="text-110 text-secondary-d1"><?php echo $count; ?></span>
                                         </div>
                                     </div>
                                 <!-- batas -->

@@ -2,7 +2,7 @@
     <div class="container text-white">
         <div class="row">
             <div class="col-12 col-md-4">
-                <!-- <img class="img-logo" src="<?= BASE_URL; ?>asset/img/logo.png" alt="" height="100%"> -->
+                <!-- <img class="img-logo" src="<?php echo BASE_URL; ?>asset/img/logo.png" alt="" height="100%"> -->
                 <h3 class="h2 font-weight-bold">R'L381</h3>
                 <p class="mt-2">Jl. May Zen, Kota Palembang</p>
                 <p>
@@ -20,22 +20,22 @@
             </div>
             <div class="col-6 col-md-3 offset-md-1 mt-2 mt-md-0">
                 <h3 class="h5">Layanan</h3>
-                <p class="mt-4"><a href="<?= BASE_URL; ?>about.php" class="text-reset text-decoration-none">Tentang Kami</a></p>
-                <p><a href="<?= BASE_URL; ?>cekresi.php" class="text-reset text-decoration-none">Cek Resi</a></p>
-                <p><a href="<?= BASE_URL; ?>order.php" class="text-reset text-decoration-none">Pemesanan</a></p>
+                <p class="mt-4"><a href="<?php echo BASE_URL; ?>about.php" class="text-reset text-decoration-none">Tentang Kami</a></p>
+                <p><a href="<?php echo BASE_URL; ?>cekresi.php" class="text-reset text-decoration-none">Cek Resi</a></p>
+                <p><a href="<?php echo BASE_URL; ?>order.php" class="text-reset text-decoration-none">Pemesanan</a></p>
             </div>
             <div class="col-6 col-md-3 offset-md-1 layanan mt-2 mt-md-0">
                 <h3 class="h5">Layanan Laundry</h3>
-                <p class="mt-4"><a href="<?= BASE_URL ?>layanan/kiloan.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="25" height="25"> Kiloan</a></p>
-                <p><a href="<?= BASE_URL ?>layanan/satuan.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/tshirt.png" width="25" height="25"> Satuan</a></p>
-                <p><a href="<?= BASE_URL ?>layanan/karpet.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/carpet.png" width="25" height="25"> Karpet</a></p>
-                <p><a href="<?= BASE_URL ?>layanan/sepatu.php" class="text-reset text-decoration-none"><img src="<?= BASE_URL; ?>asset/img/running.png" width="25" height="25"> Sepatu</a></p>
+                <p class="mt-4"><a href="<?php echo BASE_URL ?>layanan/kiloan.php" class="text-reset text-decoration-none"><img src="<?php echo BASE_URL; ?>asset/img/scale.png" width="25" height="25"> Kiloan</a></p>
+                <p><a href="<?php echo BASE_URL ?>layanan/satuan.php" class="text-reset text-decoration-none"><img src="<?php echo BASE_URL; ?>asset/img/tshirt.png" width="25" height="25"> Satuan</a></p>
+                <p><a href="<?php echo BASE_URL ?>layanan/karpet.php" class="text-reset text-decoration-none"><img src="<?php echo BASE_URL; ?>asset/img/carpet.png" width="25" height="25"> Karpet</a></p>
+                <p><a href="<?php echo BASE_URL ?>layanan/sepatu.php" class="text-reset text-decoration-none"><img src="<?php echo BASE_URL; ?>asset/img/running.png" width="25" height="25"> Sepatu</a></p>
             </div>
         </div>
     </div>
 </footer>
-<script src="<?= BASE_URL; ?>asset/js/jquery.min.js" crossorigin="anonymous"></script>
-<script src="<?= BASE_URL; ?>asset/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="<?php echo BASE_URL; ?>asset/js/jquery.min.js" crossorigin="anonymous"></script>
+<script src="<?php echo BASE_URL; ?>asset/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
 <script>

@@ -17,7 +17,7 @@
 					</article>
 				</div>
 				<div class="col-md-6 d-flex justify-content-center">
-					<img class="img-banner" src="<?= BASE_URL; ?>asset/img/logo.png" alt="RL381 Logo">
+					<img class="img-banner" src="<?php echo BASE_URL; ?>asset/img/logo.png" alt="RL381 Logo">
 				</div>
 			</div>
 		</div>
@@ -31,19 +31,19 @@
 			<div class="row">
 				<div class="col-md-3">
 					<h4>Laundry Kiloan</h4>
-					<img src="<?= BASE_URL ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL ?>asset/img/scale.png" class="img-fluid bg-primary rounded-circle" alt="">
 				</div>
 				<div class="col-md-3">
 					<h4>Laundry Satuan</h4>
-					<img src="<?= BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/tshirt.png" class="img-fluid bg-primary rounded-circle" alt="">
 				</div>
 				<div class="col-md-3">
 					<h4>Laundry Karpet</h4>
-					<img src="<?= BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/carpet.png" class="img-fluid bg-primary rounded-circle" alt="">
 				</div>
 				<div class="col-md-3 ">
 					<h4>Laundry Shoes</h4>
-					<img src="<?= BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/running.png" class="img-fluid bg-primary rounded-circle" alt="">
 				</div>
 			</div>
 		</div>
@@ -54,7 +54,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<img src="<?= BASE_URL; ?>asset/img/contact.png" alt="" width="400" height="400" style="object-fit: contain;">
+					<img src="<?php echo BASE_URL; ?>asset/img/contact.png" alt="" width="400" height="400" style="object-fit: contain;">
 				</div>
 				<div class="col-md-6 mt-md-5 d-flex align-self-center">
 					<article>
@@ -72,29 +72,29 @@
 			<h3 class="text-center mb-3 mt-0 font-weight-bold h3">Mengapa harus Rumah Laundry 381?</h3>
 			<div class="row text-center">
 				<div class="col-md-4 ">
-					<img src="<?= BASE_URL; ?>asset/img/aman.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/aman.png" class="img-fluid bg-primary rounded-circle" alt="">
 					<h5>Aman</h5>
 					<p>RL381 membuat sistem sendiri (tidak menggunakan sistem pihak ketiga), data kamu aman.</p>
 				</div>
 				<div class="col-md-4">
-					<img src="<?= BASE_URL; ?>asset/img/pesanonline.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/pesanonline.png" class="img-fluid bg-primary rounded-circle" alt="">
 					<h5 class="pl-4">Order Online</h5>
 					<p>Pesan via Web dan dapatkan promo menarik melalui Aplikasi RL381.</p>
 				</div>
 				<div class="col-md-4">
-					<img src="<?= BASE_URL; ?>asset/img/terpercaya.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/terpercaya.png" class="img-fluid bg-primary rounded-circle" alt="">
 					<h5 class="pl-4">Terpercaya</h5>
 					<p>Laundry Terpercaya dengan mengusung konsep Bersihkan Cucian dengan Ujung Jari Anda.</p>
 				</div>
 			</div>
 			<div class="row text-center">
 				<div class="col-md-4">
-					<img src="<?= BASE_URL; ?>asset/img/status.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/status.png" class="img-fluid bg-primary rounded-circle" alt="">
 					<h5>Update Status</h5>
 					<p>R381 selalu mengirimkan notifikasi melalui website kami ketika ada update status Laundry kamu.</p>
 				</div>
 				<div class="col-md-4">
-					<img src="<?= BASE_URL; ?>asset/img/antarjemput.png" class="img-fluid bg-primary rounded-circle" alt="">
+					<img src="<?php echo BASE_URL; ?>asset/img/antarjemput.png" class="img-fluid bg-primary rounded-circle" alt="">
 					<h5 class="pl-4">Antar Jemput</h5>
 					<p>R381 selalu mengirimkan notifikasi melalui website kami ketika ada update status Laundry kamu.</p>
 				</div>
@@ -107,15 +107,15 @@
 			<h3 class="text-center font-weight-bold mt-3 h3">Jam Operasional Rumah Laundry 381 </h3>
 			<div class="row text-center mt-5">
 				<div class="col-md-4">
-					<img width="18px" height="18px" src="<?= BASE_URL; ?>/asset/img/jam.png" alt=""> Laundry 08.00-20.00
+					<img width="18px" height="18px" src="<?php echo BASE_URL; ?>/asset/img/jam.png" alt=""> Laundry 08.00-20.00
 					<hr class="bg-light">
 				</div>
 				<div class="col-md-4">
-					<img width="18px" height="18px" src="<?= BASE_URL; ?>/asset/img/jam.png" alt=""> Admin 08.30-19.00
+					<img width="18px" height="18px" src="<?php echo BASE_URL; ?>/asset/img/jam.png" alt=""> Admin 08.30-19.00
 					<hr class="bg-light">
 				</div>
 				<div class="col-md-4">
-					<img width="18px" height="18px" src="<?= BASE_URL; ?>/asset/img/jam.png" alt=""> Kurir 09.00-19.00
+					<img width="18px" height="18px" src="<?php echo BASE_URL; ?>/asset/img/jam.png" alt=""> Kurir 09.00-19.00
 					<hr class="bg-light">
 				</div>
 			</div>
@@ -128,25 +128,25 @@
 			<h3 class="text-center font-weight-bold mt-5 h3">Cara Pemesanan</h3>
 			<div class="row text-center mt-5">
 				<div class="col-md-3">
-					<img width="55px" height="57px" src="<?= BASE_URL; ?>/asset/img/one.png" alt="">
+					<img width="55px" height="57px" src="<?php echo BASE_URL; ?>/asset/img/one.png" alt="">
 					<br>
 					<p class="mt-4">Pesan via Website (muncul tambah layar depan klik ok, maka otomatis menjadi aplikasi di smartphone)</p>
 					<hr class="bg-light">
 				</div>
 				<div class="col-md-3">
-					<img width="55px" height="57px" src="<?= BASE_URL; ?>/asset/img/two.png" alt="">
+					<img width="55px" height="57px" src="<?php echo BASE_URL; ?>/asset/img/two.png" alt="">
 					<br>
 					<p class="mt-4">Isi form pemesanan dan pilih layanan yang dibutuhkan (detail pesanan, jumlah, dll) dan klik pesan.</p>
 					<hr class="bg-light">
 				</div>
 				<div class="col-md-3">
-					<img width="55px" height="57px" src="<?= BASE_URL; ?>/asset/img/three.png" alt="">
+					<img width="55px" height="57px" src="<?php echo BASE_URL; ?>/asset/img/three.png" alt="">
 					<br>
 					<p class="mt-4">Konfirmasi pesanan Anda (no. resi yang terdapat pada web, nomor hp pemesanan) pada nomor wa admin dan cucian diproses.</p>
 					<hr class="bg-light">
 				</div>
 				<div class="col-md-3">
-					<img width="55px" height="57px" src="<?= BASE_URL; ?>/asset/img/four.png" alt="">
+					<img width="55px" height="57px" src="<?php echo BASE_URL; ?>/asset/img/four.png" alt="">
 					<br>
 					<p class="mt-4">Mitra terbaik kami akan segera datang!</p>
 					<hr class="bg-light">
@@ -157,7 +157,7 @@
 	<!-- batas -->
 	<!-- footer -->
 	<?php require 'template/footer.php'; ?>
-	<script src="<?= BASE_URL; ?>/script.js"></script>
+	<script src="<?php echo BASE_URL; ?>/script.js"></script>
 	<!-- batas -->
 </body>
 

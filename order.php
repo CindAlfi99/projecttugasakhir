@@ -80,7 +80,7 @@
 	<!-- footer -->
 	<?php require 'template/footer.php'; ?>
 	<!-- batas -->
-	<script src="<?= BASE_URL; ?>asset/js/order.js"></script>
+	<script src="<?php echo BASE_URL; ?>asset/js/order.js"></script>
 </body>
 
 </html>

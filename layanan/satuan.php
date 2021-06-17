@@ -15,21 +15,21 @@
 			</ol>
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					<img src="<?= BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
+					<img src="<?php echo BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>First slide label</h5>
 						<p>Some representative placeholder content for the first slide.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="<?= BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
+					<img src="<?php echo BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Second slide label</h5>
 						<p>Some representative placeholder content for the second slide.</p>
 					</div>
 				</div>
 				<div class="carousel-item">
-					<img src="<?= BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
+					<img src="<?php echo BASE_URL; ?>asset/img/slide.jpg" class="d-block w-100" alt="...">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Third slide label</h5>
 						<p>Some representative placeholder content for the third slide.</p>
@@ -49,17 +49,17 @@
 
 		<div class="row mt-5">
 
-			<div class="col-md-6"><img src="<?= BASE_URL; ?>asset/img/scale.png" width="300" heigth="100" alt=""></div>
+			<div class="col-md-6"><img src="<?php echo BASE_URL; ?>asset/img/scale.png" width="300" heigth="100" alt=""></div>
 			<div class="col-md-6">
 				<h3>Apa itu Laundry Satuan ?</h3>
 				<p><i>Laundry</i> satuan merupakan penanganan laundry khusus, dikerjakan secara manual dan satu per satu akan ditangani oleh ahlinya.<br>
 					<h5>Kelebihan : </h5>
-					<h4><img src="<?= BASE_URL; ?>asset/img/point.png" width="20" height="20"> 1 Item per Proses</h4>
+					<h4><img src="<?php echo BASE_URL; ?>asset/img/point.png" width="20" height="20"> 1 Item per Proses</h4>
 					<p>Pengerjaan 1 item setiap per proses, sehingga penanganan premium.</p>
-					<h4><img src="<?= BASE_URL; ?>asset/img/point.png" width="20" height="20"> Tidak Menggunakan Mesin</h4>
+					<h4><img src="<?php echo BASE_URL; ?>asset/img/point.png" width="20" height="20"> Tidak Menggunakan Mesin</h4>
 					<p>Pengerjaan dilakukan secara manual, sama sekali tidak menggunakan mesin.</p>
 				</p>
-				<h4><img src="<?= BASE_URL; ?>asset/img/point.png" width="20" height="20"> Menggunakan Bahan Khusus</h4>
+				<h4><img src="<?php echo BASE_URL; ?>asset/img/point.png" width="20" height="20"> Menggunakan Bahan Khusus</h4>
 				<p>Rumah Laundry 381 menggunakan chemical khusus untuk penanganan Laundry Satuan</p>
 				<a href="order.php" class="btn btn-lg btn-warning btn-order text-white">Pesan Sekarang!</a>
 			</div>
@@ -84,9 +84,9 @@
 					<?php $i = 1;
 					while ($row = mysqli_fetch_assoc($query)) : ?>
 						<tr>
-							<th scope="row"><?= $i++; ?></th>
-							<td><?= $row['item'] ?></td>
-							<td><?= $row['harga']; ?></td>
+							<th scope="row"><?php echo $i++; ?></th>
+							<td><?php echo $row['item'] ?></td>
+							<td><?php echo $row['harga']; ?></td>
 						</tr>
 					<?php endwhile; ?>
 				</tbody>
